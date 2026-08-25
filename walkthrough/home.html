@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Familiar · Главный экран и архив</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="sitenav">
+  <a class="brand" href="index.html">Familiar</a>
+  <a href="index.html">Обзор</a>
+  <a href="signin.html">Вход и первый запуск</a>
+  <a class="here" href="home.html">Главный экран и архив</a>
+  <a href="meeting.html">Встреча</a>
+  <a href="settings.html">Настройки</a>
+</nav>
+
+<header>
+  <div class="eyebrow">Familiar · раздел 2 из 4</div>
+  <h1>Главный экран и архив</h1>
+  <p class="lede">Куда пара попадает каждый раз, открывая приложение: одна кнопка «поговорить», два счётчика и история встреч. Здесь же — архив за все месяцы и фильтр по датам.</p>
+</header>
+
+<h2 id="home-section">Главный экран</h2>
+<p class="section-note">Вкладка Home. Баннер не меняется — так его нарисовал дизайнер.</p>
+
+<div class="step" id="home">
+  <figure class="shot">
+    <img src="img/home.jpg" alt="Главный экран: фотография пары, карточка Love Takes Time и жёлтая кнопка" loading="lazy">
+    <figcaption>home</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">01</span> Главный экран</h3>
+    <p class="idline">
+      <button class="copy" data-copy="home">home</button>
+    </p>
+    <p>Фотография во всю ширину, поверх неё карточка <strong>Love Takes Time</strong> с обещанием «пятнадцать минут» и жёлтая кнопка <strong>Let's have a talk</strong> — единственное действие, которого от пары ждут.</p>
+    <p>В левом верхнем углу иконка профиля, в правом — пилюля с двумя счётчиками: огонёк и сердце. Внизу плавающий таб-бар: Home, Meeting, Settings.</p>
+    <p class="under"><b>Под капотом:</b> экран читается из базы на самом телефоне, интернет ему не нужен. Иконка профиля открывает настройки — в макете нарисована сама иконка, но не то, куда она ведёт; это наше решение и вопрос дизайнеру.</p>
+  </div>
+</div>
+
+<div class="step" id="home_scrolled">
+  <figure class="shot">
+    <img src="img/home_scrolled.jpg" alt="Главный экран, прокрученный вниз: список последних встреч" loading="lazy">
+    <figcaption>home_scrolled</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">02</span> Последние встречи</h3>
+    <p class="idline">
+      <button class="copy" data-copy="home_scrolled">home_scrolled</button>
+    </p>
+    <p>Под баннером — <strong>Recent meetings</strong>: пять последних встреч. В каждой строке плашка месяца и числа, день недели со временем, первая тема и счётчик остальных («+2»). Стрелка у заголовка ведёт в полный архив.</p>
+    <p class="under"><b>Под капотом:</b> темы в строке — те, что были у встречи на момент её проведения. Если пара потом поменяет набор тем, прошедшие встречи не перепишутся: каждая фиксирует свои темы при старте.</p>
+  </div>
+</div>
+
+<div class="step" id="home_empty_scrolled">
+  <figure class="shot">
+    <img src="img/home_empty_scrolled.jpg" alt="Главный экран без встреч: картинка пустого состояния и надпись There are no records yet" loading="lazy">
+    <figcaption>home_empty_scrolled</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">03</span> Пока встреч нет</h3>
+    <p class="idline">
+      <button class="copy" data-copy="home_empty_scrolled">home_empty_scrolled</button>
+    </p>
+    <p>Пустое состояние: на месте списка — картинка и строка <strong>There are no records yet</strong>. Так выглядит приложение сразу после онбординга.</p>
+    <p class="under"><b>Под капотом:</b> у этого состояния свой кадр в макете, и он на 1065 dp — длиннее экрана телефона. Поэтому в сверке с Figma он проверяется прокрученным.</p>
+  </div>
+</div>
+
+<div class="step" id="home_stats">
+  <figure class="shot">
+    <img src="img/home_stats.jpg" alt="Шторка со счётчиками: Week streak и Total meetings" loading="lazy">
+    <figcaption>home_stats · крупный план</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">04</span> Что означают счётчики</h3>
+    <p class="idline">
+      <button class="copy" data-copy="home_stats">home_stats</button>
+    </p>
+    <p>Нажатие на пилюлю поднимает шторку с расшифровкой: <strong>Week streak</strong> — сколько недель подряд была хотя бы одна встреча, <strong>Total meetings</strong> — сколько встреч всего.</p>
+    <p class="under"><b>Под капотом:</b> сердце здесь — не лайк и вообще не оценка: это счётчик проведённых встреч. Оба числа считаются из локальной базы при каждом открытии экрана, отдельно нигде не хранятся и обнуляются вместе с историей.</p>
+  </div>
+</div>
+
+<div class="step" id="missing_details">
+  <figure class="shot">
+    <img src="img/missing_details.jpg" alt="Шторка с предупреждением, что не заполнены имена и темы" loading="lazy">
+    <figcaption>missing_details</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">05</span> Не хватает данных</h3>
+    <p class="idline">
+      <button class="copy" data-copy="missing_details">missing_details</button>
+    </p>
+    <p>Если пара пропустила онбординг и в приложении нет ни одного имени, перед встречей поднимается шторка: сходите в настройки, впишите имена и выберите темы. Кнопки — <strong>Skip</strong> и <strong>Settings</strong>.</p>
+    <p class="under"><b>Под капотом:</b> предупреждает, но не запрещает: <strong>Skip</strong> ведёт во встречу, и пара пройдёт её как Partner 1 и Partner 2.</p>
+  </div>
+</div>
+
+<h2 id="archive">Архив</h2>
+<p class="section-note">Вкладка Meeting в таб-баре. Все встречи, какие были, сгруппированные по месяцам.</p>
+
+<div class="step" id="all_meetings">
+  <figure class="shot">
+    <img src="img/all_meetings.jpg" alt="Экран All meetings: встречи, сгруппированные по месяцам" loading="lazy">
+    <figcaption>all_meetings</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">06</span> Все встречи</h3>
+    <p class="idline">
+      <button class="copy" data-copy="all_meetings">all_meetings</button>
+    </p>
+    <p>Заголовок месяца, под ним строки встреч — такие же, как на главной. Строка открывает встречу целиком.</p>
+    <p>В правом верхнем углу — иконка календаря: это фильтр.</p>
+    <p class="under"><b>Под капотом:</b> экран показывает только завершённые встречи. Прерванная лежит черновиком и в архив не попадает, пока пара её не доведёт.</p>
+  </div>
+</div>
+
+<div class="step" id="all_meetings_filter">
+  <figure class="shot">
+    <img src="img/all_meetings_filter.jpg" alt="Шторка фильтра: All dates, Last 7 days, Last 30 days, Last 12 month" loading="lazy">
+    <figcaption>all_meetings_filter</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">07</span> Фильтр по датам</h3>
+    <p class="idline">
+      <button class="copy" data-copy="all_meetings_filter">all_meetings_filter</button>
+    </p>
+    <p>Четыре периода: <strong>All dates</strong>, <strong>Last 7 days</strong>, <strong>Last 30 days</strong>, <strong>Last 12 month</strong>. Выбранный отмечен галочкой.</p>
+    <p class="under"><b>Под капотом:</b> фильтр живёт, пока экран открыт, и не запоминается. Пустого состояния «под фильтр ничего не попало» в макете нет — вопрос дизайнеру.</p>
+  </div>
+</div>
+
+<div class="step" id="past_meeting">
+  <figure class="shot">
+    <img src="img/summary.jpg" alt="Экран прошедшей встречи — тот же, что итог встречи" loading="lazy">
+    <figcaption>summary · тот же экран</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">08</span> Прошедшая встреча</h3>
+    <p class="idline">
+      <button class="copy" data-copy="summary">summary</button>
+    </p>
+    <p>Встреча из архива открывается тем же экраном, что и итог сразу после разговора. В макете это два кадра, но тексты в них совпадают дословно, поэтому экран один. Подробный разбор — в разделе <a href="meeting.html#recap_top">Встреча</a>.</p>
+    <p class="under"><b>Под капотом:</b> всё, что показано, лежит в локальной базе: настроение, планы, благодарности, вопрос-разогрев. Ничего не досчитывается заново при открытии.</p>
+  </div>
+</div>
+
+<h2 id="share">Выгрузка истории</h2>
+<div class="cards">
+  <div class="card">
+    <h4>Поделиться текстом</h4>
+    <p>Вся история выгружается простым текстом через системное «Поделиться» — в заметки, в мессенджер, письмом. Формат заказчик подтвердил: простой текст.</p>
+  </div>
+  <div class="card">
+    <h4>Резервной копии нет</h4>
+    <p>История лежит на одном телефоне. Переноса на новый и восстановления в макете нет — записано как вопрос, который пользователи зададут первым.</p>
+  </div>
+  <div class="card">
+    <h4>Лайков нет</h4>
+    <p>Сердце в счётчике и сердце на вкладке Meeting — это иконки, а не оценки. Ставить лайк встрече, теме или заметке в продукте негде и не задумано.</p>
+  </div>
+</div>
+
+<footer>
+  Скриншоты сняты на Redmi Note 10 Pro прогоном <code>uicheck/run.py</code>. Списки встреч на снимках — засеянные тестовые данные, а не настоящая история пары.
+</footer>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

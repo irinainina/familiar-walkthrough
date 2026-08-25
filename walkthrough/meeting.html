@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Familiar · Встреча</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="sitenav">
+  <a class="brand" href="index.html">Familiar</a>
+  <a href="index.html">Обзор</a>
+  <a href="signin.html">Вход и первый запуск</a>
+  <a href="home.html">Главный экран и архив</a>
+  <a class="here" href="meeting.html">Встреча</a>
+  <a href="settings.html">Настройки</a>
+</nav>
+
+<header>
+  <div class="eyebrow">Familiar · раздел 3 из 4 · проход на телефоне</div>
+  <h1>Как проходит встреча: четырнадцать экранов подряд</h1>
+  <p class="lede">Пара садится рядом с одним телефоном и за пятнадцать минут проходит разговор по заранее выбранным темам. Ниже — весь путь от главного экрана до итога, снятый на Redmi Note 10 Pro, и пояснение, что за каждым экраном стоит.</p>
+</header>
+
+<dl class="facts">
+  <div class="fact"><dt>Телефон</dt><dd>Один на двоих</dd></div>
+  <div class="fact"><dt>Данные</dt><dd>Локально, офлайн</dd></div>
+  <div class="fact"><dt>Сервер</dt><dd>Код на почту и письмо</dd></div>
+  <div class="fact"><dt>ИИ</dt><dd>Нет вовсе</dd></div>
+</dl>
+
+<h2 id="before">Перед разговором</h2>
+<p class="section-note">Три экрана до того, как пара начнёт говорить друг с другом.</p>
+
+<div class="step" id="home">
+  <figure class="shot">
+    <img src="img/demo_01_home.jpg" alt="Главный экран с баннером и кнопкой Let's have a talk" loading="lazy">
+    <figcaption>01_home</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">01</span> Главный экран</h3>
+    <p class="idline">
+      <button class="copy" data-copy="home">home</button>
+    </p>
+    <p>Баннер «Love Takes Time» не меняется — так его нарисовал дизайнер. Жёлтая кнопка <strong>Let's have a talk</strong> — единственное действие, которого от пары ждут.</p>
+    <p>Ниже — <strong>Recent meetings</strong>: последние встречи. Пока их нет, на месте списка стоит картинка пустого состояния. Внизу три вкладки: Home, Meeting, Settings.</p>
+    <p class="under"><b>Под капотом:</b> список читается из базы на самом телефоне. Интернета для этого экрана не нужно.</p>
+  </div>
+</div>
+
+<div class="step" id="topics">
+  <figure class="shot">
+    <img src="img/demo_02_topics.jpg" alt="Список тем на сегодня" loading="lazy">
+    <figcaption>02_topics</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">02</span> Темы на сегодня</h3>
+    <p class="idline">
+      <button class="copy" data-copy="topics">topics</button>
+    </p>
+    <p>Пара видит темы в том порядке, в котором их пройдёт. Порядок и состав она выбрала раньше и меняет через <strong>Edit topics and order</strong> — вдвоём, перед встречей.</p>
+    <p>Check-in стоит первым с меткой <strong>First</strong>, Wrap-up — последним с меткой <strong>Last</strong>, и убрать их нельзя: это начало и подведение итогов.</p>
+    <p class="under"><b>Под капотом:</b> выбор тем и их порядок хранятся локально и переносятся в следующую встречу.</p>
+  </div>
+</div>
+
+<div class="step" id="icebreaker">
+  <figure class="shot">
+    <img src="img/demo_02a_icebreaker.jpg" alt="Экран айсбрейкера с карточками-вопросами" loading="lazy">
+    <figcaption>02a_icebreaker</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">03</span> Разогрев</h3>
+    <p class="idline">
+      <button class="copy" data-copy="icebreaker">icebreaker</button>
+    </p>
+    <p>Лёгкий вопрос, чтобы начать не с дел: карточки перелистываются, та, что осталась в середине, и есть вопрос дня. Он же попадёт в итог встречи.</p>
+    <p class="under"><b>Под капотом:</b> вопросы лежат в приложении списком — их четыре, столько нарисовано в макете. Ничего не подгружается и не сочиняется. Для еженедельного ритуала четырёх мало, и пополнять список должен заказчик: тон этих вопросов и есть тон продукта.</p>
+  </div>
+</div>
+
+<h2 id="check-in">Как оба рассказывают о себе</h2>
+<p class="section-note">Приложение стоит только у одного партнёра, поэтому карточки идут по очереди на одном экране.</p>
+
+<div class="step" id="check_in_partner_1">
+  <figure class="shot">
+    <img src="img/demo_03_check_in_partner_1.jpg" alt="Check-in первого партнёра, шкала настроения" loading="lazy">
+    <figcaption>03_check_in_partner_1</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">04</span> Настроение первого</h3>
+    <p class="idline">
+      <button class="copy" data-copy="check_in_partner_1">check_in_partner_1</button>
+    </p>
+    <p>Пять лиц от Awful до Great. Выбранное настроение перекрашивает весь экран — это самая заметная анимация в приложении.</p>
+    <p>Ниже — поле «What's your mood?» со счётчиком символов. Текст диктуют голосом системной клавиатурой, если печатать лень.</p>
+    <p class="under"><b>Под капотом:</b> счётчик считает до 1000 и дальше не пускает; распознавания речи в приложении нет — это диктовка Android. Продиктованная фраза приходит в поле целым куском, поэтому поле её обрезает по лимиту, а не отклоняет целиком.</p>
+  </div>
+</div>
+
+<div class="step" id="check_in_partner_2">
+  <figure class="shot">
+    <img src="img/demo_04_check_in_partner_2.jpg" alt="Check-in второго партнёра" loading="lazy">
+    <figcaption>04_check_in_partner_2</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">05</span> Настроение второго</h3>
+    <p class="idline">
+      <button class="copy" data-copy="check_in_partner_2">check_in_partner_2</button>
+    </p>
+    <p>Тот же экран, но имя сверху другое. Телефон передают из рук в руки — второй партнёр отвечает сам.</p>
+    <p class="under"><b>Под капотом:</b> имена пары берутся из настроек; пока их не ввели, приложение честно пишет Partner 1 и Partner 2.</p>
+  </div>
+</div>
+
+<h2 id="topics-section">Темы</h2>
+<p class="section-note">Каждая выбранная тема — один шаг, и счётчик наверху показывает, сколько осталось.</p>
+
+<div class="step" id="topic_plan">
+  <figure class="shot">
+    <img src="img/demo_05_topic_1_plan.jpg" alt="Экран темы с планом" loading="lazy">
+    <figcaption>05_topic_1_plan</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">06</span> Тема и план</h3>
+    <p class="idline">
+      <button class="copy" data-copy="topic_plan">topic_plan</button>
+    </p>
+    <p>Фотография, подсказка <strong>Things to talk about</strong> — о чём поговорить, — и кнопка <strong>Add a plan together</strong>. План пара формулирует сама: «что мы с этим сделаем».</p>
+    <p><strong>Save</strong> сохраняет тему с планами, <strong>Skip</strong> уводит дальше без записи.</p>
+    <p class="under"><b>Под капотом:</b> шаблон экрана один на все четырнадцать тем — меняются фото, иконка, заголовок и подсказка. Планов на тему может быть несколько, каждый со своим текстом; всё пишется в локальную базу сразу, не в конце встречи.</p>
+  </div>
+</div>
+
+<div class="step" id="topic_skipped">
+  <figure class="shot">
+    <img src="img/demo_07_topic_3_skipped.jpg" alt="Пропущенная тема" loading="lazy">
+    <figcaption>07_topic_3_skipped</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">07</span> Пропущенная тема</h3>
+    <p class="idline">
+      <button class="copy" data-copy="topic_skipped">topic_skipped</button>
+    </p>
+    <p>Если тему решили не обсуждать, её пропускают. В итог встречи она не попадёт, и в отчёте будет видно, что разобрали четыре темы из пяти.</p>
+    <p class="under"><b>Под капотом:</b> пропуск — это отдельное состояние темы, а не пустой текст: в архиве видно разницу между «пропустили» и «обсудили, но ничего не записали».</p>
+  </div>
+</div>
+
+<div class="step" id="topic_last">
+  <figure class="shot">
+    <img src="img/demo_09_topic_5_plan.jpg" alt="Последняя тема встречи" loading="lazy">
+    <figcaption>09_topic_5_plan</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">08</span> Последняя тема</h3>
+    <p class="idline">
+      <button class="copy" data-copy="topic_last">topic_last</button>
+    </p>
+    <p>Ничего нового — просто конец списка. Дальше приложение само уводит на подведение итогов.</p>
+    <p class="under"><b>Под капотом:</b> если встречу прервать на любом шаге, она сохраняется черновиком и в следующий раз продолжится ровно отсюда, без вопросов и модальных окон.</p>
+  </div>
+</div>
+
+<h2 id="wrap-up">Итог</h2>
+<p class="section-note">Два экрана благодарности и один отчёт, который можно отправить себе на почту.</p>
+
+<div class="step" id="wrap_up_partner_1">
+  <figure class="shot">
+    <img src="img/demo_90_wrap_up_partner_1.jpg" alt="Wrap-up первого партнёра" loading="lazy">
+    <figcaption>90_wrap_up_partner_1</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">09</span> Оценка и благодарность</h3>
+    <p class="idline">
+      <button class="copy" data-copy="wrap_up_partner_1">wrap_up_partner_1</button>
+    </p>
+    <p>Настроение после разговора ставят цифрой от 1 до 10 кнопками «−» и «+», а ниже пишут, за что хочется сказать спасибо сегодня.</p>
+    <p class="under"><b>Под капотом:</b> это та же карточка, что и в check-in, но с другим вопросом — сравнение «до» и «после» и есть смысл шкалы. Что в check-in пять лиц, а здесь десятибалльная шкала — расхождение самого макета, записанное вопросом дизайнеру.</p>
+  </div>
+</div>
+
+<div class="step" id="wrap_up_partner_2">
+  <figure class="shot">
+    <img src="img/demo_91_wrap_up_partner_2.jpg" alt="Wrap-up второго партнёра" loading="lazy">
+    <figcaption>91_wrap_up_partner_2</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">10</span> То же для второго</h3>
+    <p class="idline">
+      <button class="copy" data-copy="wrap_up_partner_2">wrap_up_partner_2</button>
+    </p>
+    <p>Телефон снова передают. После этого экрана встреча считается завершённой.</p>
+    <p class="under"><b>Под капотом:</b> момент завершения — это когда встреча перестаёт быть черновиком и попадает в архив.</p>
+  </div>
+</div>
+
+<div class="step" id="recap_top">
+  <figure class="shot">
+    <img src="img/demo_92_recap_top.jpg" alt="Верх экрана итога встречи" loading="lazy">
+    <figcaption>92_recap_top</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">11</span> Что обсудили</h3>
+    <p class="idline">
+      <button class="copy" data-copy="recap_top">recap_top</button>
+    </p>
+    <p>Дата встречи, сколько тем разобрали, вопрос-разогрев с ответом и дальше — список тем.</p>
+    <p class="under"><b>Под капотом:</b> отчёт собирается из того, что пара сама наговорила и записала. Ничего не пересказывается и не обобщается машиной.</p>
+  </div>
+</div>
+
+<div class="step" id="recap_bottom">
+  <figure class="shot">
+    <img src="img/demo_93_recap_bottom.jpg" alt="Низ экрана итога с кнопкой отправки" loading="lazy">
+    <figcaption>93_recap_bottom</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">12</span> Отправить себе</h3>
+    <p class="idline">
+      <button class="copy" data-copy="recap_bottom">recap_bottom</button>
+    </p>
+    <p>Темы раскрываются по нажатию — внутри настроение обоих и записанные планы. Внизу два действия: <strong>Back to home</strong> и <strong>Send summary to…</strong>.</p>
+    <p class="under"><b>Под капотом:</b> письмо уходит через серверную функцию Supabase — это единственное место, где приложению нужен интернет, кроме входа. Не ушло — попробует ещё раз позже. Кнопки внизу в макете обрезаны краем кадра, подписана только правая; левая взята из разбора функционала, вопрос дизайнеру записан.</p>
+  </div>
+</div>
+
+<h2 id="more">Остальные экраны встречи</h2>
+<p class="section-note">Того же сценария, но в стороне от прохода: пустые состояния, редактирование тем и раскрытый итог.</p>
+
+<div class="step" id="meeting_topics">
+  <figure class="shot">
+    <img src="img/meeting_topics.jpg" alt="Экран Meeting topics с тумблерами Included" loading="lazy">
+    <figcaption>meeting_topics</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">13</span> Состав и порядок тем</h3>
+    <p class="idline">
+      <button class="copy" data-copy="meeting_topics">meeting_topics</button>
+    </p>
+    <p>Куда ведёт <strong>Edit topics and order</strong> с экрана тем: четырнадцать тем с описаниями и тумблерами <strong>Included</strong>, минимум одна включённая. Темы переставляются пальцем за ручку слева.</p>
+    <p>Этот же экран открывается из настроек как <strong>Topics management</strong> — он один.</p>
+    <p class="under"><b>Под капотом:</b> встреча фиксирует свои темы при старте, поэтому правка списка не переписывает прошедшие встречи. Заказчик назвал смену тем прямо перед встречей «странным юскейсом» — по замыслу набор стабилен неделями, а меняют его в настройках.</p>
+  </div>
+</div>
+
+<div class="step" id="check_in">
+  <figure class="shot">
+    <img src="img/check_in.jpg" alt="Пустой экран check-in со шкалой настроения на Okay" loading="lazy">
+    <figcaption>check_in</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">14</span> Check-in, пока ничего не выбрано</h3>
+    <p class="idline">
+      <button class="copy" data-copy="check_in">check_in</button>
+    </p>
+    <p>Так экран выглядит до того, как партнёр тронул шкалу: настроение стоит посередине, на <strong>Okay</strong>, поле пустое, счётчик показывает <strong>0/1000</strong>.</p>
+    <p class="under"><b>Под капотом:</b> когда клавиатура занимает пол-экрана, check-in убирает лицо и вопрос, оставляя шкалу и поле, — ровно так, как это нарисовано в макете. Счётчик краснеет у предела, а длинный текст прокручивается внутри поля и не двигает кнопки.</p>
+  </div>
+</div>
+
+<div class="step" id="summary_unfolded">
+  <figure class="shot">
+    <img src="img/summary_unfolded.jpg" alt="Итог встречи с раскрытыми карточками check-in" loading="lazy">
+    <figcaption>summary_unfolded</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">15</span> Итог с раскрытыми карточками</h3>
+    <p class="idline">
+      <button class="copy" data-copy="summary_unfolded">summary_unfolded</button>
+    </p>
+    <p>Карточки <strong>Check-in</strong> и <strong>Wrap-up</strong> складываются в одну строку и раскрываются нажатием: внутри настроение каждого партнёра и его текст целиком. Ниже — <strong>Key notes</strong>, все записанные планы одним нумерованным списком.</p>
+    <p class="under"><b>Под капотом:</b> экран длиной 2686 dp в макете — это один длинный скролл, а не несколько экранов. Отметок «выполнено» у планов нет намеренно: это список для перечитывания, а не то-до-лист.</p>
+  </div>
+</div>
+
+<h2 id="edge">Крайние случаи</h2>
+<div class="cards">
+  <div class="card">
+    <h4>Длинные названия тем</h4>
+    <p>«Career &amp; Professional Development» переносится на две строки и сдвигает всё под собой. Проверяется отдельно — <code>topic_long_title</code> и <code>topic_longest_title</code>.</p>
+  </div>
+  <div class="card">
+    <h4>Прерванная встреча</h4>
+    <p>Сохраняется черновиком и подхватывается молча, с того же шага. Экрана «продолжить или начать заново» в макете нет, и мы его не рисуем.</p>
+  </div>
+  <div class="card">
+    <h4>Уход в фон</h4>
+    <p>Когда приложение сворачивают, запись не откладывается на потом: система даёт момент дописать встречу в базу.</p>
+  </div>
+  <div class="card">
+    <h4>Диктовка</h4>
+    <p>Нативной клавиатурой Android. Диктуют не весь разговор, а сформулированные пункты — постоянной записи разговора в продукте нет.</p>
+  </div>
+</div>
+
+<footer>
+  Первые двенадцать снимков сделаны автоматическим проходом <code>tools/demo_walk.py</code> на реальном телефоне: скрипт нажимает кнопки по их подписям, как это делает человек, и снимает экран после каждого шага. Остальные — из сверки вёрстки <code>uicheck/run.py</code>.
+</footer>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

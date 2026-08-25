@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Familiar · Как устроено приложение</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="sitenav">
+  <a class="brand" href="index.html">Familiar</a>
+  <a class="here" href="index.html">Обзор</a>
+  <a href="signin.html">Вход и первый запуск</a>
+  <a href="home.html">Главный экран и архив</a>
+  <a href="meeting.html">Встреча</a>
+  <a href="settings.html">Настройки</a>
+</nav>
+
+<header>
+  <div class="eyebrow">Familiar · приложение целиком</div>
+  <h1>Как устроено приложение: все экраны со снимками</h1>
+  <p class="lede">Familiar — приложение для пары, которая раз в неделю садится рядом с одним телефоном и за пятнадцать минут проходит разговор по заранее выбранным темам. Здесь описан весь продукт: вход, первый запуск, главный экран, архив, сама встреча, напоминания и настройки. Каждый экран — со снимком с реального телефона, с именем, которое можно скопировать, и с пояснением, что за ним стоит.</p>
+</header>
+
+<dl class="facts">
+  <div class="fact"><dt>Телефон</dt><dd>Один на двоих</dd></div>
+  <div class="fact"><dt>Данные</dt><dd>Локально, офлайн</dd></div>
+  <div class="fact"><dt>Сервер</dt><dd>Код на почту и письмо</dd></div>
+  <div class="fact"><dt>ИИ</dt><dd>Нет вовсе</dd></div>
+</dl>
+
+<h2 id="sections">Четыре раздела</h2>
+<div class="cards">
+  <div class="card">
+    <h4><a href="signin.html">Вход и первый запуск</a></h4>
+    <p>Девять экранов, которые видят один раз: вход без пароля, имена пары, первые темы, уведомления, согласие на обработку данных.</p>
+  </div>
+  <div class="card">
+    <h4><a href="home.html">Главный экран и архив</a></h4>
+    <p>Куда попадают при каждом запуске: баннер с кнопкой, счётчики, последние встречи, полный архив по месяцам и фильтр по датам.</p>
+  </div>
+  <div class="card">
+    <h4><a href="meeting.html">Встреча</a></h4>
+    <p>Сквозной проход от кнопки «Let's have a talk» до итога, который уходит письмом: разогрев, настроение обоих, темы с планами, благодарности, отчёт.</p>
+  </div>
+  <div class="card">
+    <h4><a href="settings.html">Настройки</a></h4>
+    <p>Имена, расписание и напоминания, управление темами, документы, данные аккаунта, смена почты, выход и удаление.</p>
+  </div>
+</div>
+
+<h2 id="how">Как это работает</h2>
+<p class="section-note">Четыре решения, из которых следует почти всё остальное.</p>
+<div class="cards">
+  <div class="card">
+    <h4>Один телефон на двоих</h4>
+    <p>Приложение стоит у одного партнёра, второй отвечает на том же экране. Поэтому карточки идут по очереди, а не параллельно, и второго устройства, синхронизации и приглашений в продукте нет.</p>
+  </div>
+  <div class="card">
+    <h4>Данные живут на устройстве</h4>
+    <p>Встречи, настроение, планы и благодарности лежат в базе на телефоне. Встреча работает офлайн целиком.</p>
+  </div>
+  <div class="card">
+    <h4>Сервер — только для входа и письма</h4>
+    <p>Supabase присылает код на почту, хранит учётную запись и отправляет итог встречи письмом. Больше ему ничего не передаётся.</p>
+  </div>
+  <div class="card">
+    <h4>Ничего не сочиняется</h4>
+    <p>Итог встречи собран из того, что пара сама написала или продиктовала. Ни пересказа, ни советов, ни генерации — искусственного интеллекта в продукте нет.</p>
+  </div>
+</div>
+
+<h2 id="absent">Чего в приложении нет</h2>
+<p class="section-note">Записано, чтобы не искать: это не пропущено, а сознательно не сделано.</p>
+<div class="cards">
+  <div class="card">
+    <h4>Лайков</h4>
+    <p>Ни встречу, ни тему, ни заметку нельзя лайкнуть. Сердце в счётчике на главном экране — это число проведённых встреч, а сердце на вкладке Meeting — просто иконка вкладки.</p>
+  </div>
+  <div class="card">
+    <h4>Записи разговора</h4>
+    <p>Приложение не пишет и не расшифровывает разговор. Диктовкой набирают только итоговые пункты, и делает это клавиатура Android, а не приложение.</p>
+  </div>
+  <div class="card">
+    <h4>Отметок «выполнено»</h4>
+    <p>Планы и ключевые действия нельзя закрыть галочкой. Это список для перечитывания, а не то-до-лист.</p>
+  </div>
+  <div class="card">
+    <h4>Второго устройства</h4>
+    <p>Ни синхронизации, ни приглашения партнёра, ни видеосвязи и удалённого режима встречи.</p>
+  </div>
+  <div class="card">
+    <h4>Пароля и входа через Apple</h4>
+    <p>Только код на почту или Google. На андроидном кадре макета кнопки Apple нет, значит нет и в приложении.</p>
+  </div>
+  <div class="card">
+    <h4>Тёмной темы и резервной копии</h4>
+    <p>Ни того, ни другого в макете не нарисовано. Системный размер шрифта приложение при этом уважает.</p>
+  </div>
+</div>
+
+<h2 id="index">Указатель экранов</h2>
+<p class="section-note">Имя экрана — то, чем удобно на него ссылаться: «поправь <code>home_stats</code>». Оно же стоит под каждым снимком, копируется одним нажатием и в отладочной сборке открывает экран ссылкой <code>familiar://…</code>.</p>
+
+<table class="index-table">
+  <thead>
+    <tr><th>Имя</th><th>Экран</th><th>Где описан</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>auth</td><td>Вход: почта и Google</td><td><a href="signin.html#auth">Вход и первый запуск</a></td></tr>
+    <tr><td>auth_typed</td><td>Адрес введён, кнопка ожила</td><td><a href="signin.html#auth_typed">Вход и первый запуск</a></td></tr>
+    <tr><td>auth_invalid</td><td>Адрес с ошибкой</td><td><a href="signin.html#auth_invalid">Вход и первый запуск</a></td></tr>
+    <tr><td>verify</td><td>Шестизначный код из письма</td><td><a href="signin.html#verify">Вход и первый запуск</a></td></tr>
+    <tr><td>signed_in</td><td>«You're in»</td><td><a href="signin.html#signed_in">Вход и первый запуск</a></td></tr>
+    <tr><td>notifications</td><td>Подводка к разрешению на уведомления</td><td><a href="signin.html#notifications">Вход и первый запуск</a></td></tr>
+    <tr><td>onboarding_names</td><td>Имена пары при первом запуске</td><td><a href="signin.html#onboarding_names">Вход и первый запуск</a></td></tr>
+    <tr><td>onboarding_topics</td><td>Первый выбор тем</td><td><a href="signin.html#onboarding_topics">Вход и первый запуск</a></td></tr>
+    <tr><td>consent</td><td>Согласие на обработку данных</td><td><a href="signin.html#consent">Вход и первый запуск</a></td></tr>
+
+    <tr><td>home</td><td>Главный экран</td><td><a href="home.html#home">Главный экран и архив</a></td></tr>
+    <tr><td>home_scrolled</td><td>Последние встречи под баннером</td><td><a href="home.html#home_scrolled">Главный экран и архив</a></td></tr>
+    <tr><td>home_empty_scrolled</td><td>Пустая история</td><td><a href="home.html#home_empty_scrolled">Главный экран и архив</a></td></tr>
+    <tr><td>home_stats</td><td>Шторка со счётчиками</td><td><a href="home.html#home_stats">Главный экран и архив</a></td></tr>
+    <tr><td>missing_details</td><td>«Не хватает данных» перед встречей</td><td><a href="home.html#missing_details">Главный экран и архив</a></td></tr>
+    <tr><td>all_meetings</td><td>Архив по месяцам</td><td><a href="home.html#all_meetings">Главный экран и архив</a></td></tr>
+    <tr><td>all_meetings_filter</td><td>Фильтр по датам</td><td><a href="home.html#all_meetings_filter">Главный экран и архив</a></td></tr>
+
+    <tr><td>topics</td><td>Темы на сегодня, порядок прохода</td><td><a href="meeting.html#topics">Встреча</a></td></tr>
+    <tr><td>icebreaker</td><td>Вопрос-разогрев, стопка карточек</td><td><a href="meeting.html#icebreaker">Встреча</a></td></tr>
+    <tr><td>check_in</td><td>Настроение, пустое состояние</td><td><a href="meeting.html#check_in">Встреча</a></td></tr>
+    <tr><td>check_in_partner_1</td><td>Настроение первого партнёра</td><td><a href="meeting.html#check_in_partner_1">Встреча</a></td></tr>
+    <tr><td>check_in_partner_2</td><td>Настроение второго партнёра</td><td><a href="meeting.html#check_in_partner_2">Встреча</a></td></tr>
+    <tr><td>topic_plan</td><td>Тема с планами</td><td><a href="meeting.html#topic_plan">Встреча</a></td></tr>
+    <tr><td>topic_skipped</td><td>Пропущенная тема</td><td><a href="meeting.html#topic_skipped">Встреча</a></td></tr>
+    <tr><td>topic_last</td><td>Последняя тема встречи</td><td><a href="meeting.html#topic_last">Встреча</a></td></tr>
+    <tr><td>wrap_up_partner_1</td><td>Оценка и благодарность первого</td><td><a href="meeting.html#wrap_up_partner_1">Встреча</a></td></tr>
+    <tr><td>wrap_up_partner_2</td><td>Оценка и благодарность второго</td><td><a href="meeting.html#wrap_up_partner_2">Встреча</a></td></tr>
+    <tr><td>recap_top</td><td>Итог встречи, верх</td><td><a href="meeting.html#recap_top">Встреча</a></td></tr>
+    <tr><td>recap_bottom</td><td>Итог встречи, низ с отправкой</td><td><a href="meeting.html#recap_bottom">Встреча</a></td></tr>
+    <tr><td>summary_unfolded</td><td>Итог с раскрытыми карточками</td><td><a href="meeting.html#summary_unfolded">Встреча</a></td></tr>
+    <tr><td>summary</td><td>Прошедшая встреча из архива</td><td><a href="home.html#past_meeting">Главный экран и архив</a></td></tr>
+    <tr><td>meeting_topics</td><td>Состав и порядок тем</td><td><a href="settings.html#meeting_topics">Настройки</a></td></tr>
+
+    <tr><td>settings</td><td>Меню настроек</td><td><a href="settings.html#settings">Настройки</a></td></tr>
+    <tr><td>partners_edit</td><td>Имена пары</td><td><a href="settings.html#partners_edit">Настройки</a></td></tr>
+    <tr><td>meeting_preferences</td><td>Расписание и напоминания</td><td><a href="settings.html#meeting_preferences">Настройки</a></td></tr>
+    <tr><td>meeting_preferences_scrolled</td><td>Автоотправка итогов и выгрузка истории</td><td><a href="settings.html#meeting_preferences_scrolled">Настройки</a></td></tr>
+    <tr><td>account</td><td>Данные аккаунта</td><td><a href="settings.html#account">Настройки</a></td></tr>
+    <tr><td>change_email</td><td>Смена почты</td><td><a href="settings.html#change_email">Настройки</a></td></tr>
+    <tr><td>delete_account</td><td>Удаление аккаунта</td><td><a href="settings.html#delete_account">Настройки</a></td></tr>
+    <tr><td>terms</td><td>Условия</td><td><a href="settings.html#terms">Настройки</a></td></tr>
+    <tr><td>privacy</td><td>Политика конфиденциальности</td><td><a href="settings.html#privacy">Настройки</a></td></tr>
+    <tr><td>contact_us</td><td>Письмо в поддержку</td><td><a href="settings.html#contact_us">Настройки</a></td></tr>
+    <tr><td>log_out</td><td>Выход из аккаунта</td><td><a href="settings.html#log_out">Настройки</a></td></tr>
+  </tbody>
+</table>
+
+<h2 id="pending">Чего пока нет на этих страницах</h2>
+<div class="cards">
+  <div class="card">
+    <h4>Выхода из аккаунта</h4>
+    <p>У строки <code>log_out</code> своего экрана нет: она возвращает на экран входа. Показывать нечего.</p>
+  </div>
+  <div class="card">
+    <h4>Сплэш</h4>
+    <p>Экран запуска с анимацией логотипа виден меньше секунды и снимку не поддаётся: три пузыря всплывают по одному за 800 мс.</p>
+  </div>
+  <div class="card">
+    <h4>Крайние случаи имён и лимитов</h4>
+    <p>Короткое имя, длинное, имя с эмодзи, предел в 1000 символов — всё это проверено, но отдельными экранами не является.</p>
+  </div>
+</div>
+
+<footer>
+  Снимки сделаны на Redmi Note 10 Pro: сквозной проход встречи — скриптом <code>tools/demo_walk.py</code>, остальные экраны — сверкой вёрстки <code>uicheck/run.py</code>. Страницы правятся как обычные файлы: <code>index.html</code>, <code>signin.html</code>, <code>home.html</code>, <code>meeting.html</code>, <code>settings.html</code> и общий <code>styles.css</code>.
+</footer>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

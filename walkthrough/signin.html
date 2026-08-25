@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Familiar · Вход и первый запуск</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="sitenav">
+  <a class="brand" href="index.html">Familiar</a>
+  <a href="index.html">Обзор</a>
+  <a class="here" href="signin.html">Вход и первый запуск</a>
+  <a href="home.html">Главный экран и архив</a>
+  <a href="meeting.html">Встреча</a>
+  <a href="settings.html">Настройки</a>
+</nav>
+
+<header>
+  <div class="eyebrow">Familiar · раздел 1 из 4</div>
+  <h1>Вход и первый запуск</h1>
+  <p class="lede">Девять экранов, которые пара видит один раз: как войти без пароля и как приложение спрашивает имена, темы, разрешение на уведомления и согласие на обработку данных. Дальше этих экранов не будет — все отметки о пройденном хранятся на телефоне.</p>
+</header>
+
+<h2 id="sign-in">Вход</h2>
+<p class="section-note">Пароля в продукте нет вовсе: либо код из письма, либо аккаунт Google.</p>
+
+<div class="step" id="auth">
+  <figure class="shot">
+    <img src="img/auth.jpg" alt="Экран входа: фотография пары, поле для почты, кнопка Continue и вход через Google" loading="lazy">
+    <figcaption>auth</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">01</span> Экран входа</h3>
+    <p class="idline">
+      <button class="copy" data-copy="auth">auth</button>
+    </p>
+    <p>Первое, что видит человек после сплэша: фотография пары, заголовок <strong>Unlock your meeting experience!</strong>, поле <strong>Email address</strong> и кнопка <strong>Continue</strong>. Ниже, через «or», — <strong>Continue with Google</strong>.</p>
+    <p>Кнопки Apple здесь нет намеренно: у дизайнера отдельный андроидный кадр, и на нём только Google.</p>
+    <p class="under"><b>Под капотом:</b> кнопка Continue погашена, пока в поле пусто. Google подключён нативно, через Credential Manager, — браузер не открывается. Одна и та же почта, введённая руками и пришедшая от Google, даёт одну учётную запись, а не две.</p>
+  </div>
+</div>
+
+<div class="step" id="auth_typed">
+  <figure class="shot">
+    <img src="img/auth_typed.jpg" alt="Крупный план: поле с введённым адресом и активная кнопка Continue" loading="lazy">
+    <figcaption>auth_typed · крупный план</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">02</span> Адрес введён</h3>
+    <p class="idline">
+      <button class="copy" data-copy="auth_typed">auth_typed</button>
+    </p>
+    <p>Как только в поле появляется текст, кнопка становится тёмной и работает. Это тот же экран <code>auth</code>, снятый крупно: сверка с макетом сравнивает здесь только полосу вокруг поля.</p>
+    <p class="under"><b>Под капотом:</b> нажатие на Continue — это запрос к Supabase на отправку кода. Каждое нажатие считается на сервере, поэтому автопроверки его не жмут.</p>
+  </div>
+</div>
+
+<div class="step" id="auth_invalid">
+  <figure class="shot">
+    <img src="img/auth_invalid.jpg" alt="Поле с ошибкой: красная рамка и надпись Please enter a valid email address" loading="lazy">
+    <figcaption>auth_invalid · крупный план</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">03</span> Адрес с ошибкой</h3>
+    <p class="idline">
+      <button class="copy" data-copy="auth_invalid">auth_invalid</button>
+    </p>
+    <p>Запятая вместо точки — и поле краснеет, под ним появляется <strong>Please enter a valid email address</strong>, а кнопка гаснет обратно.</p>
+    <p class="under"><b>Под капотом:</b> адрес проверяется на телефоне, до всякой сети. Сервер о таком письме даже не узнаёт.</p>
+  </div>
+</div>
+
+<div class="step" id="verify">
+  <figure class="shot">
+    <img src="img/verify.jpg" alt="Экран ввода шестизначного кода из письма" loading="lazy">
+    <figcaption>verify</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">04</span> Код из письма</h3>
+    <p class="idline">
+      <button class="copy" data-copy="verify">verify</button>
+    </p>
+    <p>Шесть ячеек под цифры, адрес получателя над ними и <strong>Resend Code</strong>, если письмо не пришло. Неверный код показывает ошибку и не пускает дальше.</p>
+    <p class="under"><b>Под капотом:</b> письмо уходит через собственный SMTP, подключённый к Supabase, — со встроенным отправщиком в письме был бы не код, а ссылка на localhost. Длина кода выставлена в шесть цифр в настройках проекта; по умолчанию приходило восемь.</p>
+  </div>
+</div>
+
+<div class="step" id="signed_in">
+  <figure class="shot">
+    <img src="img/signed_in.jpg" alt="Экран You're in с двумя иллюстрациями и кнопкой Continue" loading="lazy">
+    <figcaption>signed_in</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">05</span> Вход состоялся</h3>
+    <p class="idline">
+      <button class="copy" data-copy="signed_in">signed_in</button>
+    </p>
+    <p><strong>You're in</strong> — единственная задача экрана сказать, что почта подтверждена, и увести дальше, в онбординг.</p>
+    <p class="under"><b>Под капотом:</b> с этого момента на телефоне лежит отметка владельца. Вход другим адресом стирает историю пары, вход тем же — оставляет её на месте, поэтому чужой человек не увидит чужие встречи.</p>
+  </div>
+</div>
+
+<h2 id="onboarding">Первый запуск</h2>
+<p class="section-note">Четыре экрана подряд, и каждый, кроме согласия, можно пропустить. Пропуск везде что-то значит.</p>
+
+<div class="step" id="notifications">
+  <figure class="shot">
+    <img src="img/notifications.jpg" alt="Экран Never miss a moment с двумя наклонёнными карточками" loading="lazy">
+    <figcaption>notifications</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">06</span> Разрешение на уведомления</h3>
+    <p class="idline">
+      <button class="copy" data-copy="notifications">notifications</button>
+    </p>
+    <p><strong>Never miss a moment</strong> — свой экран-подводка перед системным запросом Android. <strong>Turn On Notifications</strong> вызывает системное окно, <strong>Maybe Later</strong> уводит дальше молча.</p>
+    <p class="under"><b>Под капотом:</b> подводка нужна, потому что системное окно Android спрашивают один раз: отказ на нём уже не переспросишь, а разрешение потом включается только в настройках телефона. Отказ ничего не ломает — напоминания просто не приходят.</p>
+  </div>
+</div>
+
+<div class="step" id="onboarding_names">
+  <figure class="shot">
+    <img src="img/onboarding_names.jpg" alt="Экран Meet the two of you с двумя полями для имён" loading="lazy">
+    <figcaption>onboarding_names</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">07</span> Имена пары</h3>
+    <p class="idline">
+      <button class="copy" data-copy="onboarding_names">onboarding_names</button>
+    </p>
+    <p>Два поля, соединённые словом «and», и шаг <strong>Step 1 of 2</strong> наверху. Имена подставляются потом всюду: в карточки check-in, в итог встречи, в архив.</p>
+    <p><strong>Skip</strong> разрешён — тогда пара называется Partner 1 и Partner 2, и имена можно вписать позже в настройках.</p>
+    <p class="under"><b>Под капотом:</b> экран правки имён в настройках — тот же самый, дизайнер рисует их одинаково. Меняются только заголовок и кнопка.</p>
+  </div>
+</div>
+
+<div class="step" id="onboarding_topics">
+  <figure class="shot">
+    <img src="img/onboarding_topics.jpg" alt="Экран Pick your first topics с карточками тем в два столбца" loading="lazy">
+    <figcaption>onboarding_topics</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">08</span> Первые темы</h3>
+    <p class="idline">
+      <button class="copy" data-copy="onboarding_topics">onboarding_topics</button>
+    </p>
+    <p>Четырнадцать тем карточками в два столбца: галочка — тема включена, плюс — нет. <strong>Step 2 of 2</strong>, кнопки <strong>Skip</strong> и <strong>Finish</strong>.</p>
+    <p><strong>Skip</strong> оставляет пять тем по умолчанию — те, что отмечены на этом экране заранее.</p>
+    <p class="under"><b>Под капотом:</b> выбор ложится в базу на телефоне и потом живёт в настройках, в «Topics management». Отдельного списка «темы онбординга» нет — он один на всё приложение.</p>
+  </div>
+</div>
+
+<div class="step" id="consent">
+  <figure class="shot">
+    <img src="img/consent.jpg" alt="Шторка с формой согласия на обработку персональных данных" loading="lazy">
+    <figcaption>consent</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">09</span> Согласие на обработку данных</h3>
+    <p class="idline">
+      <button class="copy" data-copy="consent">consent</button>
+    </p>
+    <p>Шторка поднимается поверх выбора тем: что приложение хранит на устройстве, что обрабатывает и что может уйти сторонним вендорам. Пилюля <strong>Learn more</strong> открывает условия, кнопки — <strong>Do not consent</strong> и <strong>Consent &amp; Continue</strong>.</p>
+    <p>Это единственный шаг, который нельзя пропустить.</p>
+    <p class="under"><b>Под капотом:</b> при отказе приложение не закрывается — форма остаётся и объясняет, что без согласия дальше нельзя. Хранить всё локально «вместо согласия» не годится: спрашивают не про сервер, а про обработку данных вообще. Тон формулировок в этой шторке — наш; такие тексты обычно пишет юрист.</p>
+  </div>
+</div>
+
+<h2 id="missing">Если онбординг пропустили</h2>
+<div class="cards">
+  <div class="card">
+    <h4>Шторка «Something's missing»</h4>
+    <p>Перед встречей без единого имени поднимается предупреждение — <a href="home.html#missing_details">missing_details</a>. Оно предупреждает, но не запрещает.</p>
+  </div>
+  <div class="card">
+    <h4>Спрашивается один раз</h4>
+    <p>Имена, темы, уведомления и согласие спрашиваются при первом запуске. Отметки лежат в настройках на телефоне, и повторно эти экраны не появятся.</p>
+  </div>
+  <div class="card">
+    <h4>Всё это правится позже</h4>
+    <p>Имена — в <a href="settings.html#partners_edit">partners_edit</a>, темы — в <a href="settings.html#meeting_topics">meeting_topics</a>, напоминания — в <a href="settings.html#meeting_preferences">meeting_preferences</a>.</p>
+  </div>
+</div>
+
+<footer>
+  Скриншоты сняты на Redmi Note 10 Pro прогоном <code>uicheck/run.py</code> — тем же инструментом, что сверяет вёрстку с Figma. Имя под каждым снимком — это имя экрана в проверке, по нему же экран открывается ссылкой <code>familiar://…</code> в отладочной сборке.
+</footer>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Familiar · Настройки, напоминания и аккаунт</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="sitenav">
+  <a class="brand" href="index.html">Familiar</a>
+  <a href="index.html">Обзор</a>
+  <a href="signin.html">Вход и первый запуск</a>
+  <a href="home.html">Главный экран и архив</a>
+  <a href="meeting.html">Встреча</a>
+  <a class="here" href="settings.html">Настройки</a>
+</nav>
+
+<header>
+  <div class="eyebrow">Familiar · раздел 4 из 4</div>
+  <h1>Настройки, напоминания и аккаунт</h1>
+  <p class="lede">Третья вкладка таб-бара: имена пары, расписание и напоминания, управление темами, документы, данные аккаунта и его удаление. Здесь же всё, что связано с почтой и с сервером.</p>
+</header>
+
+<h2 id="menu">Меню</h2>
+
+<div class="step" id="settings">
+  <figure class="shot">
+    <img src="img/settings.jpg" alt="Экран настроек: четыре группы пунктов" loading="lazy">
+    <figcaption>settings</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">01</span> Настройки</h3>
+    <p class="idline">
+      <button class="copy" data-copy="settings">settings</button>
+    </p>
+    <p>Восемь пунктов, разложенных по четырём группам:</p>
+    <p><strong>General</strong> — Account details, Partners information.<br>
+       <strong>Meetings</strong> — Meeting preferences, Topics management.<br>
+       <strong>Documents</strong> — Terms &amp; Conditions, Privacy policy.<br>
+       <strong>Other</strong> — Contact us, Log out.</p>
+    <p>Внизу списка — версия приложения.</p>
+    <p class="under"><b>Под капотом:</b> в макете весь список нарисован одним кадром высотой 1077 dp; на телефоне он прокручивается под плавающим таб-баром. Сюда же ведёт иконка профиля с главного экрана.</p>
+  </div>
+</div>
+
+<h2 id="pair">Пара и темы</h2>
+
+<div class="step" id="partners_edit">
+  <figure class="shot">
+    <img src="img/partners_edit.jpg" alt="Экран Partners information с двумя полями имён" loading="lazy">
+    <figcaption>partners_edit</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">02</span> Имена пары</h3>
+    <p class="idline">
+      <button class="copy" data-copy="partners_edit">partners_edit</button>
+    </p>
+    <p>Те же два поля, что в онбординге, — дизайнер рисует эти экраны одинаково. Отличий два: заголовок <strong>Partners information</strong> и одна кнопка <strong>Save</strong>, погашенная, пока менять нечего.</p>
+    <p class="under"><b>Под капотом:</b> имена подставляются во все прошлые встречи тоже — в архиве они не «вморожены» в запись. Длинное имя и имя с эмодзи проверены отдельно: в карточке архива они обрезаются, а не ломают строку.</p>
+  </div>
+</div>
+
+<div class="step" id="meeting_topics">
+  <figure class="shot">
+    <img src="img/meeting_topics.jpg" alt="Экран Meeting topics: темы с тумблерами Included" loading="lazy">
+    <figcaption>meeting_topics</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">03</span> Управление темами</h3>
+    <p class="idline">
+      <button class="copy" data-copy="meeting_topics">meeting_topics</button>
+    </p>
+    <p>Пункт <strong>Topics management</strong>: четырнадцать тем с описаниями и тумблерами <strong>Included</strong>, минимум одна включённая. Порядок меняется перетаскиванием.</p>
+    <p>Это тот же экран, что открывается перед встречей кнопкой <strong>Edit topics and order</strong> — разбор есть и в разделе <a href="meeting.html#meeting_topics">Встреча</a>.</p>
+    <p class="under"><b>Под капотом:</b> по замыслу заказчика набор тем стабилен неделями, поэтому удобным должно быть именно это место, а не правка на бегу перед разговором.</p>
+  </div>
+</div>
+
+<h2 id="reminders">Расписание и напоминания</h2>
+<p class="section-note">Всё, что приложение делает само: напоминает поговорить и отправляет итог письмом.</p>
+
+<div class="step" id="meeting_preferences">
+  <figure class="shot">
+    <img src="img/meeting_preferences.jpg" alt="Экран Meeting preferences: расписание, напоминания, уведомления" loading="lazy">
+    <figcaption>meeting_preferences</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">04</span> Настройки встреч</h3>
+    <p class="idline">
+      <button class="copy" data-copy="meeting_preferences">meeting_preferences</button>
+    </p>
+    <p>Три группы, все с тумблерами и выпадающими значениями:</p>
+    <p><strong>Schedule</strong> — включить расписание и выбрать, как часто: Day, Week, Two Weeks, Month.<br>
+       <strong>Reminders</strong> — включить напоминания и выбрать часть суток: Morning, Noon, Evening.<br>
+       <strong>Notifications</strong> — чем напоминать: Push, Email или оба сразу; автоотправка итогов на почту и время отправки.</p>
+    <p class="under"><b>Под капотом:</b> напоминания ставит сам телефон, сервер для этого не нужен — WorkManager, одна работа, которая после срабатывания ставит следующую; выключенный тумблер снимает её с очереди, перезагрузка телефона её не рушит. Части суток — это часы 9, 13 и 20; макет даёт только слова, часы наши, и заказчик их подтвердил. Текст уведомления — «Time for your meeting. Fifteen minutes, just the two of you» — тоже наш: уведомлений в макете не нарисовано вовсе.</p>
+    <p class="under"><b>Осторожно с этим экраном:</b> в актуальной версии макета его нет — он остался в старой, в размере 375×812, и приведён к сетке Version 2 нами. Вопрос, перерисует ли его дизайнер, открыт.</p>
+  </div>
+</div>
+
+<div class="step" id="meeting_preferences_scrolled">
+  <figure class="shot">
+    <img src="img/meeting_preferences_scrolled.jpg" alt="Низ экрана настроек встреч: автоотправка итогов и выгрузка истории" loading="lazy">
+    <figcaption>meeting_preferences_scrolled</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">05</span> Автоотправка и выгрузка</h3>
+    <p class="idline">
+      <button class="copy" data-copy="meeting_preferences_scrolled">meeting_preferences_scrolled</button>
+    </p>
+    <p>Низ того же экрана. <strong>Auto-send summaries to emails</strong> с выбором времени — итог уходит письмом сам, без нажатия на кнопку в конце встречи. Ниже — <strong>Export meeting summaries</strong>: вся история простым текстом через системное «Поделиться».</p>
+    <p>Внизу закреплена кнопка <strong>Save</strong>: настройки применяются по ней, а не по каждому переключению.</p>
+    <p class="under"><b>Под капотом:</b> автоотправка ставится на выбранный час и ждёт сети — если интернета нет, письмо уйдёт позже само. Формат выгрузки заказчик подтвердил: простой текст, без файлов и таблиц.</p>
+  </div>
+</div>
+
+<h2 id="account">Аккаунт</h2>
+
+<div class="step" id="account">
+  <figure class="shot">
+    <img src="img/account.jpg" alt="Экран Account details: почта, способы входа, удаление аккаунта" loading="lazy">
+    <figcaption>account</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">06</span> Данные аккаунта</h3>
+    <p class="idline">
+      <button class="copy" data-copy="account">account</button>
+    </p>
+    <p><strong>Your Email</strong> с кнопкой <strong>Edit</strong>, <strong>Sign-in methods</strong> с Google и кнопкой <strong>Connect</strong>, внизу красная строка <strong>Delete account</strong>.</p>
+    <p>Apple в списке нет: входа через него в приложении нет, а рисовать строку, которая ничего не делает, хуже, чем не рисовать.</p>
+    <p class="under"><b>Под капотом:</b> адрес берётся из сессии, длинный обрезается многоточием. Google подключается только «адрес в адрес»: чужой аккаунт увёл бы пару в другую учётную запись со всей её историей, и приложение отказывает словами. Отключить Google можно, если остаётся хотя бы один способ войти.</p>
+  </div>
+</div>
+
+<div class="step" id="change_email">
+  <figure class="shot">
+    <img src="img/change_email.jpg" alt="Экран Change Email с полем для нового адреса" loading="lazy">
+    <figcaption>change_email</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">07</span> Смена почты</h3>
+    <p class="idline">
+      <button class="copy" data-copy="change_email">change_email</button>
+    </p>
+    <p>Новый адрес, кнопка <strong>Confirm</strong> — и тот же экран с шестизначным кодом, что при входе. После подтверждения приложение говорит, что адрес обновлён.</p>
+    <p class="under"><b>Под капотом:</b> проверено живьём дважды — адрес сменён и возвращён обратно. На сервере ради этого пришлось выключить «Secure email change», иначе писем и кодов приходило по два, и вписать код в шаблон письма о смене адреса.</p>
+  </div>
+</div>
+
+<div class="step" id="delete_account">
+  <figure class="shot">
+    <img src="img/delete_account.jpg" alt="Диалог Oh no! Is this goodbye? с кнопками Yes, delete и No, stay" loading="lazy">
+    <figcaption>delete_account</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">08</span> Удаление аккаунта</h3>
+    <p class="idline">
+      <button class="copy" data-copy="delete_account">delete_account</button>
+    </p>
+    <p>Диалог <strong>Oh no! Is this goodbye?</strong> — «все данные будут удалены навсегда, включая историю встреч и личную информацию». Кнопки <strong>Yes, delete</strong> и <strong>No, stay</strong>. После удаления приложение выбрасывает на экран входа.</p>
+    <p class="under"><b>Под капотом:</b> удаляет серверная функция: служебный ключ не должен покидать сервер, поэтому телефон только доказывает токеном, кто он. Порядок важен — сначала ответ сервера, потом стирание телефона. Проверено живьём: вход тем же адресом после удаления даёт новую пустую учётную запись, а не старую историю.</p>
+  </div>
+</div>
+
+<h2 id="documents">Документы и поддержка</h2>
+
+<div class="step" id="terms">
+  <figure class="shot">
+    <img src="img/terms.jpg" alt="Экран Terms & Conditions" loading="lazy">
+    <figcaption>terms</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">09</span> Условия</h3>
+    <p class="idline">
+      <button class="copy" data-copy="terms">terms</button>
+    </p>
+    <p>Полный текст условий с датой последнего обновления. Сюда же ведёт пилюля <strong>Learn more</strong> из формы согласия при первом запуске.</p>
+    <p class="under"><b>Под капотом:</b> текст взят из макета дословно — сочинять ничего не пришлось. Это закрыло вопрос, который висел с недели 7: без текста кнопка «Learn more» вела в никуда, и её не было.</p>
+  </div>
+</div>
+
+<div class="step" id="privacy">
+  <figure class="shot">
+    <img src="img/privacy.jpg" alt="Экран Privacy Policy" loading="lazy">
+    <figcaption>privacy</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">10</span> Политика конфиденциальности</h3>
+    <p class="idline">
+      <button class="copy" data-copy="privacy">privacy</button>
+    </p>
+    <p>Что собирается, как используется, как защищается и какие у пользователя права. Тоже дословно из макета.</p>
+    <p class="under"><b>Под капотом:</b> оба документа отличаются от кадра Figma только переносами строк: Poppins на телефоне помещает в строку на слово больше, чем Figma, и на странице текста это набегает.</p>
+  </div>
+</div>
+
+<div class="step" id="contact_us">
+  <figure class="shot">
+    <img src="img/contact_us.jpg" alt="Почтовый клиент телефона с уже вписанным адресом поддержки" loading="lazy">
+    <figcaption>contact_us · почтовый клиент телефона</figcaption>
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">11</span> Написать в поддержку</h3>
+    <p class="idline">
+      <button class="copy" data-copy="contact_us">contact_us</button>
+    </p>
+    <p>Строка <strong>Contact us</strong> открывает почтовый клиент телефона с уже вписанным адресом поддержки. Своего экрана переписки в приложении нет — в макете нарисован именно почтовый клиент.</p>
+    <p>На снимке закрашены строка отправителя и его фотография: это личные данные владельца телефона, а не часть приложения.</p>
+    <p class="under"><b>Под капотом:</b> если почтового клиента на телефоне нет вовсе, открывать нечего — приложение об этом молчит. Это случай, которого в макете нет.</p>
+  </div>
+</div>
+
+<div class="step" id="log_out">
+  <figure class="shot none">
+    Отдельного экрана нет: строка Log out возвращает на экран входа <a href="signin.html#auth">auth</a>.
+  </figure>
+  <div class="step-body">
+    <h3><span class="num">12</span> Выход из аккаунта</h3>
+    <p class="idline">
+      <button class="copy" data-copy="log_out">log_out</button>
+    </p>
+    <p>Последняя строка меню. Выход возвращает приложение на экран входа.</p>
+    <p class="under"><b>Под капотом:</b> выход не стирает историю: она остаётся на телефоне и ждёт. Вход тем же адресом покажет её на месте, вход другим — очистит телефон, потому что данные пары привязаны к учётной записи.</p>
+  </div>
+</div>
+
+<h2 id="notes">Что стоит знать про этот раздел</h2>
+<div class="cards">
+  <div class="card">
+    <h4>Размер шрифта системы</h4>
+    <p>Приложение следует системному размеру текста. Тёмной темы нет: в макете её не нарисовано.</p>
+  </div>
+  <div class="card">
+    <h4>Ящик отправителя</h4>
+    <p>Письма уходят с ящика разработчика — это времянка. К релизу нужен домен или ящик заказчика.</p>
+  </div>
+  <div class="card">
+    <h4>Данные лежат на телефоне</h4>
+    <p>Сервер знает только учётную запись и адрес почты. Настроение, планы и благодарности не покидают устройство, кроме письма с итогом, которое пара отправляет сама.</p>
+  </div>
+</div>
+
+<footer>
+  Скриншоты сняты на Redmi Note 10 Pro. Большая часть — прогоном <code>uicheck/run.py</code>, а настройки встреч, диалог удаления и почтовый клиент сняты отдельно: в автоматическую сверку вёрстки они не входят.
+</footer>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
