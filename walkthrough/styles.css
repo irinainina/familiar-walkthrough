@@ -197,5 +197,46 @@ footer a { color: var(--accent); }
 @media (max-width: 720px) {
   .step { grid-template-columns: 1fr; gap: 20px; }
   .shot { max-width: 320px; }
-  .index-table td:first-child { white-space: normal; }
+  .index-table td:first-child { white-space: normal; overflow-wrap: anywhere; }
+}
+
+/* ---------- what changed: before and after ---------- */
+
+.change {
+  display: grid; grid-template-columns: 456px 1fr; gap: 32px;
+  align-items: start; padding: 32px 0; border-top: 1px solid var(--line);
+  scroll-margin-top: 16px;
+}
+.change.single { grid-template-columns: 220px 1fr; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+/* A screenshot is 480 wide; left to itself it would widen the grid past a phone's screen. */
+.change > *, .pair > * { min-width: 0; }
+.change.single .pair { grid-template-columns: 1fr; }
+.pair .shot figcaption { display: flex; justify-content: space-between; gap: 8px; }
+.pair .shot figcaption span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pair .shot figcaption .tag { flex-shrink: 0; }
+.tag {
+  font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11px;
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.tag.was { color: var(--ink-faint); }
+.tag.now { color: var(--accent); }
+.change-body h3 {
+  font-family: Poppins, system-ui, sans-serif; font-weight: 600;
+  font-size: 20px; margin: 0 0 10px; line-height: 1.3;
+}
+.change-body p { margin: 0 0 12px; max-width: 60ch; }
+.change-body p:last-child { margin-bottom: 0; }
+.refs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.ref {
+  font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px;
+  color: #101827; background: var(--mark); border-radius: 6px; padding: 2px 7px;
+}
+.ref.q { background: var(--accent-soft); color: var(--ink); }
+.card .refs { margin: 0 0 6px; }
+
+@media (max-width: 860px) {
+  .change, .change.single { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .pair { max-width: 456px; }
+  .change.single .pair { max-width: 220px; }
 }

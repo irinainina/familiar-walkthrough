@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Familiar · Что изменилось</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="sitenav">
+  <a class="brand" href="index.html">Familiar</a>
+  <a href="index.html">Обзор</a>
+  <a href="signin.html">Вход и первый запуск</a>
+  <a href="home.html">Главный экран и архив</a>
+  <a href="meeting.html">Встреча</a>
+  <a href="settings.html">Настройки</a>
+  <a class="here" href="changes.html">Что изменилось</a>
+</nav>
+
+<header>
+  <div class="eyebrow">Familiar · после тестирования</div>
+  <h1>Что изменилось после тестирования</h1>
+  <p class="lede">Снимки на остальных страницах сделаны 24–25 августа, до тестирования; здесь — что поменялось с тех пор и почему. Слева снимок того времени, справа — сегодняшний, с того же телефона.</p>
+</header>
+
+<dl class="facts">
+  <div class="fact"><dt>08.09</dt><dd>Список из 40 пунктов</dd></div>
+  <div class="fact"><dt>11.09</dt><dd>Правки и ответы</dd></div>
+  <div class="fact"><dt>15.09</dt><dd>Сверка с Figma</dd></div>
+  <div class="fact"><dt>16.09</dt><dd>Ретест, пункты 41–51</dd></div>
+</dl>
+
+<p class="section-note">«№» — номер в отчёте тестировщицы: 1–40 из списка 08.09, 41–51 из ретеста 14–15.09. «Вопрос» — из её вопросов 08.09. «Наш № 41» — падение при смене аккаунта, найденное нами по её наводке; в ретесте под № 41 другой пункт.</p>
+
+<h2 id="signin">Вход</h2>
+<p class="section-note">Экран входа, код из письма и всё, что бывает между ними.</p>
+<div class="change single" id="photo">
+  <div class="pair"><figure class="shot"><img src="img/auth.jpg" alt="Стало: Фото уходит под статус-бар" loading="lazy"><figcaption><span>auth</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Фото уходит под статус-бар</h3>
+    <div class="refs"><span class="ref">№ 3</span></div>
+    <p>В макете, и в iOS-, и в Android-кадре, фотография начинается от самого верха экрана, а часы и батарея лежат поверх неё. У нас она начиналась под статус-баром, а полоса над ней была фоном страницы.</p><p>Теперь приложение рисует под системными панелями на всех версиях Android, а отступ под статус-бар каждый экран берёт сам — все, кроме входа. Снимка «было» нет: старые снимки обрезаны по статус-бару, и полосы на них не видно.</p>
+  </div>
+</div>
+<div class="change" id="code">
+  <div class="pair"><figure class="shot"><img src="img/before/verify.jpg" alt="Было: Код из письма: предупреждение и минута ожидания" loading="lazy"><figcaption><span>verify</span><span class="tag was">было</span></figcaption></figure><figure class="shot"><img src="img/verify.jpg" alt="Стало: Код из письма: предупреждение и минута ожидания" loading="lazy"><figcaption><span>verify</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Код из письма: предупреждение и минута ожидания</h3>
+    <div class="refs"><span class="ref">№ 13</span><span class="ref q">вопрос 2</span></div>
+    <p>Письмо с кодом иногда идёт пару минут, а каждый Resend гасит прежний код. Человек не дожидался письма, просил новое, вводил код из первого — и получал «код не подошёл».</p><p>Под полем появилась строка о задержке, а Resend Code первую минуту закрыт и показывает обратный отсчёт.</p>
+  </div>
+</div>
+<div class="change single" id="keyboard">
+  <div class="pair"><figure class="shot"><img src="img/auth_keyboard.jpg" alt="Стало: Клавиатура не закрывает поле" loading="lazy"><figcaption><span>auth_keyboard</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Клавиатура не закрывает поле</h3>
+    <div class="refs"><span class="ref">№ 8</span><span class="ref">№ 30</span></div>
+    <p>С Android 15 окно приложения больше не сжимается под клавиатуру, и поле почты, строка Resend Code, поле плана оказывались под ней.</p><p>Теперь страницы с полями ввода сами поднимаются над клавиатурой: вход, код, check-in, план темы, wrap-up, имена и смена почты.</p>
+  </div>
+</div>
+<div class="cards">
+  <div class="card">
+    <div class="refs"><span class="ref">№ 5</span></div><h4>Одинаковое сообщение без сети</h4>
+    <p>И почта, и Google говорят «No Internet connection». Заодно нашлось, что Google-путь без сети молчал совсем.</p>
+  </div>
+  <div class="card">
+    <div class="refs"><span class="ref">№ 6</span><span class="ref">№ 12</span></div><h4>Стёртый адрес не возвращается</h4>
+    <p>Очистка поля стирает сохранённый адрес, а выход из аккаунта — адрес, код и ошибку.</p>
+  </div>
+  <div class="card">
+    <div class="refs"><span class="ref">№ 7</span></div><h4>Клавиша клавиатуры не отправляет</h4>
+    <p>Кнопка на клавиатуре только прячет её. Выбор между Continue и Google остаётся за человеком.</p>
+  </div>
+  <div class="card">
+    <div class="refs"><span class="ref">№ 14</span></div><h4>Можно добавить другой Google</h4>
+    <p>Вместо списка уже добавленных на телефон аккаунтов — обычный выбор Google с пунктом «Добавить аккаунт».</p>
+  </div>
+  <div class="card">
+    <div class="refs"><span class="ref">№ 21</span><span class="ref q">вопрос 10</span></div><h4>«You're in» один раз</h4>
+    <p>Приветствие показывается при первом входе на этом телефоне, дальше вход ведёт сразу туда, где остановились.</p>
+  </div>
+  <div class="card">
+    <div class="refs"><span class="ref">наш № 41</span><span class="ref">№ 18</span><span class="ref">№ 37</span></div><h4>Нет падения при смене аккаунта</h4>
+    <p>Очистка базы при входе другим аккаунтом шла в потоке экрана и роняла приложение. Та же ошибка не давала удалить аккаунт.</p>
+  </div>
+</div>
+<h2 id="onboarding">Первый запуск</h2>
+<p class="section-note">Имена, темы, уведомления и согласие.</p>
+<div class="change" id="notifications">
+  <div class="pair"><figure class="shot"><img src="img/before/notifications.jpg" alt="Было: Картинка на экране уведомлений" loading="lazy"><figcaption><span>notifications</span><span class="tag was">было</span></figcaption></figure><figure class="shot"><img src="img/notifications.jpg" alt="Стало: Картинка на экране уведомлений" loading="lazy"><figcaption><span>notifications</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Картинка на экране уведомлений</h3>
+    <div class="refs"><span class="ref">№ 15</span></div>
+    <p>Карточки в макете наклонены в разные стороны, кружки повёрнуты относительно карточек, а размеры меньше, чем мы брали: мерили габарит уже наклонённой фигуры. Всё выставлено по числам из макета.</p>
+  </div>
+</div>
+<div class="change" id="names">
+  <div class="pair"><figure class="shot"><img src="img/before/onboarding_names.jpg" alt="Было: Без номера шага и без стрелки на первом шаге" loading="lazy"><figcaption><span>onboarding_names</span><span class="tag was">было</span></figcaption></figure><figure class="shot"><img src="img/onboarding_names.jpg" alt="Стало: Без номера шага и без стрелки на первом шаге" loading="lazy"><figcaption><span>onboarding_names</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Без номера шага и без стрелки на первом шаге</h3>
+    <div class="refs"><span class="ref">№ 17</span></div>
+    <p>Подпись «Step 1 of 2» в макете скрыта, а стрелке на первом шаге некуда вести. Убраны обе; на втором шаге стрелка осталась.</p>
+  </div>
+</div>
+<div class="change" id="topics-icons">
+  <div class="pair"><figure class="shot"><img src="img/before/onboarding_topics.jpg" alt="Было: Цвета иконок тем" loading="lazy"><figcaption><span>onboarding_topics</span><span class="tag was">было</span></figcaption></figure><figure class="shot"><img src="img/onboarding_topics.jpg" alt="Стало: Цвета иконок тем" loading="lazy"><figcaption><span>onboarding_topics</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Цвета иконок тем</h3>
+    <div class="refs"><span class="ref">№ 35</span><span class="ref">№ 17</span></div>
+    <p>У каждой темы в макете свой цвет иконки внутри кружка, у нас иконка была белой или тёмной. Номера шага здесь тоже больше нет.</p>
+  </div>
+</div>
+<div class="cards">
+  <div class="card">
+    <div class="refs"><span class="ref">№ 20</span></div><h4>Без тем закончить нельзя</h4>
+    <p>Finish неактивна, пока не выбрана хотя бы одна тема — как Save в настройках.</p>
+  </div>
+  <div class="card">
+    <div class="refs"><span class="ref">№ 36</span><span class="ref q">вопрос 1</span><span class="ref q">вопрос 11</span></div><h4>Согласие не обойти перезапуском</h4>
+    <p>После сплэша приложение открывает первый несделанный шаг онбординга, а не Home.</p>
+  </div>
+  <div class="card">
+    <div class="refs"><span class="ref">№ 43</span></div><h4>Темы на месте после смены аккаунта</h4>
+    <p>Смена аккаунта очищала и список тем, а засевался он только при запуске приложения. Теперь сразу после очистки.</p>
+  </div>
+</div>
+<h2 id="home">Главный экран и архив</h2>
+<p class="section-note">Home, шторка перед встречей, архив и прошедшая встреча.</p>
+<div class="change" id="recent-empty">
+  <div class="pair"><figure class="shot"><img src="img/before/home_empty_scrolled.jpg" alt="Было: Нет стрелки над пустым списком" loading="lazy"><figcaption><span>home_empty_scrolled</span><span class="tag was">было</span></figcaption></figure><figure class="shot"><img src="img/home_empty_scrolled.jpg" alt="Стало: Нет стрелки над пустым списком" loading="lazy"><figcaption><span>home_empty_scrolled</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Нет стрелки над пустым списком</h3>
+    <div class="refs"><span class="ref">№ 42</span></div>
+    <p>Пока встреч нет, стрелка у Recent meetings вела в пустой архив. В макете её в этом состоянии нет — теперь нет и у нас.</p>
+  </div>
+</div>
+<div class="change" id="missing">
+  <div class="pair"><figure class="shot"><img src="img/before/missing_details.jpg" alt="Было: «Missing details» — при старте встречи, а не на Home" loading="lazy"><figcaption><span>missing_details</span><span class="tag was">было</span></figcaption></figure><figure class="shot"><img src="img/missing_details.jpg" alt="Стало: «Missing details» — при старте встречи, а не на Home" loading="lazy"><figcaption><span>missing_details</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>«Missing details» — при старте встречи, а не на Home</h3>
+    <div class="refs"><span class="ref">№ 19</span></div>
+    <p>Шторка выглядит так же, поменялось, когда она появляется. Раньше — на Home, стоило открыть приложение. Теперь — при нажатии Let's have a talk или вкладки Meeting, если у пары нет имён.</p><p>Skip ведёт дальше во встречу, Settings — в настройки. Спрашивает один раз за запуск приложения.</p>
+  </div>
+</div>
+<div class="change single" id="filter">
+  <div class="pair"><figure class="shot"><img src="img/all_meetings_filtered.jpg" alt="Стало: Видно, какой фильтр выбран" loading="lazy"><figcaption><span>all_meetings_filtered</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Видно, какой фильтр выбран</h3>
+    <div class="refs"><span class="ref q">вопрос 5</span></div>
+    <p>Раньше выбранный период было видно только в открытой шторке, и короткий список читался как «мы редко встречаемся». Теперь под заголовком плашка с периодом, крестик сбрасывает фильтр.</p>
+  </div>
+</div>
+<div class="change" id="past">
+  <div class="pair"><figure class="shot"><img src="img/before/summary.jpg" alt="Было: Прошедшая встреча: только стрелка назад" loading="lazy"><figcaption><span>summary</span><span class="tag was">было</span></figcaption></figure><figure class="shot"><img src="img/summary.jpg" alt="Стало: Прошедшая встреча: только стрелка назад" loading="lazy"><figcaption><span>summary</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Прошедшая встреча: только стрелка назад</h3>
+    <div class="refs"><span class="ref">№ 41</span></div>
+    <p>Кнопка Back to home на встрече из архива вела обратно в архив. В макете там только стрелка назад — так и сделано; Send summary осталась на всю ширину.</p><p>Итог только что закончившейся встречи не менялся: Back to home и Send.</p>
+  </div>
+</div>
+<div class="cards">
+  <div class="card">
+    <div class="refs"><span class="ref">№ 27</span></div><h4>Таб-бар плавает над страницей</h4>
+    <p>Как в макете: содержимое проходит под ним, а последняя строка страницы из-под него выходит.</p>
+  </div>
+</div>
+<h2 id="meeting">Встреча</h2>
+<p class="section-note">От экрана тем до итога.</p>
+<div class="change" id="unfinished">
+  <div class="pair"><figure class="shot"><img src="img/before/demo_02_topics.jpg" alt="Было: Незавершённую встречу нельзя перестроить" loading="lazy"><figcaption><span>topics</span><span class="tag was">было</span></figcaption></figure><figure class="shot"><img src="img/topics_unfinished.jpg" alt="Стало: Незавершённую встречу нельзя перестроить" loading="lazy"><figcaption><span>topics</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Незавершённую встречу нельзя перестроить</h3>
+    <div class="refs"><span class="ref">№ 45</span></div>
+    <p>Темы встречи фиксируются при её старте. Раньше на Today's topics показывался новый набор из настроек, его можно было поменять — а продолжалась встреча со старым.</p><p>Теперь, пока встреча не закончена, на этом экране её собственные темы и нет кнопки Edit topics &amp; order.</p>
+  </div>
+</div>
+<div class="change" id="topic-card">
+  <div class="pair"><figure class="shot"><img src="img/before/demo_05_topic_1_plan.jpg" alt="Было: Карточка темы как в макете" loading="lazy"><figcaption><span>topic_plan</span><span class="tag was">было</span></figcaption></figure><figure class="shot"><img src="img/demo_05_topic_1_plan.jpg" alt="Стало: Карточка темы как в макете" loading="lazy"><figcaption><span>topic_plan</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Карточка темы как в макете</h3>
+    <div class="refs"><span class="ref">№ 39</span></div>
+    <p>Наклон фото у половины тем был зеркальным, карточка с текстом у разных тем в макете стоит на разной высоте, а иконка в кружке была крупнее и выше центра. Выверено по всем четырнадцати темам.</p>
+  </div>
+</div>
+<div class="change single" id="plan">
+  <div class="pair"><figure class="shot"><img src="img/topic_plan_keyboard.jpg" alt="Стало: План не закрывается от касания заголовка" loading="lazy"><figcaption><span>topic_plan_keyboard</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>План не закрывается от касания заголовка</h3>
+    <div class="refs"><span class="ref">№ 44</span><span class="ref">№ 30</span></div>
+    <p>Касание вне поля сохраняет план и закрывает поле. Заголовок «New plan» и края карточки тоже считались «вне». Теперь касание в любом месте карточки оставляет поле открытым. Поле поднимается над клавиатурой.</p>
+  </div>
+</div>
+<div class="change" id="wrap-up">
+  <div class="pair"><figure class="shot"><img src="img/before/demo_90_wrap_up_partner_1.jpg" alt="Было: Wrap-up без шкалы Mood" loading="lazy"><figcaption><span>wrap_up</span><span class="tag was">было</span></figcaption></figure><figure class="shot"><img src="img/demo_90_wrap_up_partner_1.jpg" alt="Стало: Wrap-up без шкалы Mood" loading="lazy"><figcaption><span>wrap_up</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Wrap-up без шкалы Mood</h3>
+    <div class="refs"><span class="ref">№ 38</span><span class="ref">№ 40</span></div>
+    <p>Секция Mood в макете скрыта: на экране только имя и благодарность. Подложка карточки видна только сверху и снизу, а не по бокам.</p>
+  </div>
+</div>
+<div class="change single" id="leave">
+  <div class="pair"><figure class="shot"><img src="img/leave_meeting.jpg" alt="Стало: Крестик во время встречи спрашивает" loading="lazy"><figcaption><span>leave_meeting</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Крестик во время встречи спрашивает</h3>
+    <div class="refs"><span class="ref q">вопрос 7</span></div>
+    <p>Крестик на шаге встречи раньше молча уводил домой. Теперь спрашивает и объясняет, что встреча сохранится и продолжится с этого шага.</p>
+  </div>
+</div>
+<div class="cards">
+  <div class="card">
+    <div class="refs"><span class="ref">№ 34</span><span class="ref">№ 32</span><span class="ref q">вопрос 9</span></div><h4>Skip возвращает, как было</h4>
+    <p>Skip на check-in и на теме возвращает то, что было до открытия экрана. Okay, который не трогали, теперь записывается в итог.</p>
+  </div>
+  <div class="card">
+    <div class="refs"><span class="ref">№ 31</span></div><h4>«Назад» — сначала к первому партнёру</h4>
+    <p>И стрелка, и системная кнопка на втором партнёре возвращают к первому, а не уводят с шага.</p>
+  </div>
+  <div class="card">
+    <div class="refs"><span class="ref">№ 33</span></div><h4>После итога «назад» — на Home</h4>
+    <p>Шаги законченной встречи убираются из стека.</p>
+  </div>
+  <div class="card">
+    <div class="refs"><span class="ref">№ 16</span><span class="ref">№ 26</span></div><h4>Отступ у кнопок и тумблеры без мигания</h4>
+    <p>На экране состава тем кнопки отодвинуты от системной панели, а выбор тем пишется одной операцией.</p>
+  </div>
+  <div class="card">
+    <div class="refs"><span class="ref">№ 46</span></div><h4>Быстрые нажатия «назад» не ломают экран</h4>
+    <p>Повторное нажатие стрелки, крестика или Save во время перехода игнорируется — раньше оно снимало лишний экран до пустого.</p>
+  </div>
+</div>
+<h2 id="settings">Настройки</h2>
+<p class="section-note">Меню, имена, напоминания, аккаунт.</p>
+<div class="change" id="menu">
+  <div class="pair"><figure class="shot"><img src="img/before/settings.jpg" alt="Было: Меню настроек по макету" loading="lazy"><figcaption><span>settings</span><span class="tag was">было</span></figcaption></figure><figure class="shot"><img src="img/settings.jpg" alt="Стало: Меню настроек по макету" loading="lazy"><figcaption><span>settings</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Меню настроек по макету</h3>
+    <div class="refs"><span class="ref">№ 22</span></div>
+    <p>Строки стоят плотнее, иконки контурные из макета, у версии облачко с шестерёнкой, Log out красный. Появились стрелка назад и крестик: они возвращают на экран, с которого открыли настройки.</p>
+  </div>
+</div>
+<div class="change" id="partners">
+  <div class="pair"><figure class="shot"><img src="img/before/partners_edit.jpg" alt="Было: Имена: после Save остаёмся на экране" loading="lazy"><figcaption><span>partners_edit</span><span class="tag was">было</span></figcaption></figure><figure class="shot"><img src="img/partners_saved.jpg" alt="Стало: Имена: после Save остаёмся на экране" loading="lazy"><figcaption><span>partners_edit</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Имена: после Save остаёмся на экране</h3>
+    <div class="refs"><span class="ref">№ 25</span></div>
+    <p>Раньше Save уводил в Settings, и тост оказывался там, наезжая на таб-бар. В макете тост показан на самом экране имён, а Save после сохранения неактивна — так и сделано.</p>
+  </div>
+</div>
+<div class="change single" id="topics-locked">
+  <div class="pair"><figure class="shot"><img src="img/topics_locked.jpg" alt="Стало: Темы не меняются посреди встречи" loading="lazy"><figcaption><span>topics_locked</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Темы не меняются посреди встречи</h3>
+    <div class="refs"><span class="ref">№ 45</span></div>
+    <p>Пока встреча не закончена, Topics management не открывается и говорит об этом тостом. Над таб-баром тост теперь поднимается над ним, а не касается.</p>
+  </div>
+</div>
+<div class="change" id="reminders">
+  <div class="pair"><figure class="shot"><img src="img/before/meeting_preferences.jpg" alt="Было: Предупреждение, что уведомления выключены" loading="lazy"><figcaption><span>meeting_preferences</span><span class="tag was">было</span></figcaption></figure><figure class="shot"><img src="img/meeting_preferences.jpg" alt="Стало: Предупреждение, что уведомления выключены" loading="lazy"><figcaption><span>meeting_preferences</span><span class="tag now">стало</span></figcaption></figure></div>
+  <div class="change-body">
+    <h3>Предупреждение, что уведомления выключены</h3>
+    <div class="refs"><span class="ref">№ 51</span><span class="ref q">вопрос 4</span></div>
+    <p>Если напоминание идёт push-ом, а уведомления для приложения выключены в телефоне, экран говорит, что напоминания не придут, и ведёт в настройки телефона.</p>
+  </div>
+</div>
+<div class="cards">
+  <div class="card">
+    <div class="refs"><span class="ref">№ 23</span></div><h4>Ошибки не переезжают между экранами</h4>
+    <p>Каждый экран аккаунта начинается с чистого листа: ни старой ошибки, ни недописанного адреса.</p>
+  </div>
+  <div class="card">
+    <div class="refs"><span class="ref">№ 18</span><span class="ref">№ 37</span></div><h4>Удаление аккаунта работает</h4>
+    <p>Причина была в падении при очистке базы, см. раздел «Вход». После удаления приложение выходит на экран входа.</p>
+  </div>
+  <div class="card">
+    <div class="refs"><span class="ref">№ 28</span></div><h4>Списки в Privacy policy</h4>
+    <p>Переносы строк в тексте больше не схлопываются в одну строку.</p>
+  </div>
+</div>
+
+<footer>
+  «Было» — снимки из <code>img/before/</code>, сделанные 24–25.08. «Стало» — снимки 16.09 на Redmi Note 10 Pro, Android 13, со сборки после правок по ретесту. Где снимка «было» нет, экран или его состояние появились позже.
+</footer>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

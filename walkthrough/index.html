@@ -19,6 +19,7 @@
   <a href="home.html">Главный экран и архив</a>
   <a href="meeting.html">Встреча</a>
   <a href="settings.html">Настройки</a>
+  <a href="changes.html">Что изменилось</a>
 </nav>
 
 <header>
@@ -51,6 +52,14 @@
   <div class="card">
     <h4><a href="settings.html">Настройки</a></h4>
     <p>Имена, расписание и напоминания, управление темами, документы, данные аккаунта, смена почты, выход и удаление.</p>
+  </div>
+</div>
+
+<h2 id="changes">После тестирования</h2>
+<div class="cards">
+  <div class="card">
+    <h4><a href="changes.html">Что изменилось</a></h4>
+    <p>Правки по списку тестировщицы от 08.09, сверке с Figma 15.09 и ретесту 14–15.09: снимки «было» и «стало» рядом, для каждой правки — что поменялось, почему и номер пункта.</p>
   </div>
 </div>
 
@@ -129,6 +138,7 @@
     <tr><td>missing_details</td><td>«Не хватает данных» перед встречей</td><td><a href="home.html#missing_details">Главный экран и архив</a></td></tr>
     <tr><td>all_meetings</td><td>Архив по месяцам</td><td><a href="home.html#all_meetings">Главный экран и архив</a></td></tr>
     <tr><td>all_meetings_filter</td><td>Фильтр по датам</td><td><a href="home.html#all_meetings_filter">Главный экран и архив</a></td></tr>
+    <tr><td>all_meetings_filtered</td><td>Архив с выбранным периодом</td><td><a href="home.html#all_meetings_filtered">Главный экран и архив</a></td></tr>
 
     <tr><td>topics</td><td>Темы на сегодня, порядок прохода</td><td><a href="meeting.html#topics">Встреча</a></td></tr>
     <tr><td>icebreaker</td><td>Вопрос-разогрев, стопка карточек</td><td><a href="meeting.html#icebreaker">Встреча</a></td></tr>
@@ -143,11 +153,15 @@
     <tr><td>recap_top</td><td>Итог встречи, верх</td><td><a href="meeting.html#recap_top">Встреча</a></td></tr>
     <tr><td>recap_bottom</td><td>Итог встречи, низ с отправкой</td><td><a href="meeting.html#recap_bottom">Встреча</a></td></tr>
     <tr><td>summary_unfolded</td><td>Итог с раскрытыми карточками</td><td><a href="meeting.html#summary_unfolded">Встреча</a></td></tr>
+    <tr><td>leave_meeting</td><td>«Выйти из встречи?» по крестику</td><td><a href="meeting.html#leave_meeting">Встреча</a></td></tr>
+    <tr><td>topics_unfinished</td><td>Темы незавершённой встречи</td><td><a href="changes.html#unfinished">Что изменилось</a></td></tr>
     <tr><td>summary</td><td>Прошедшая встреча из архива</td><td><a href="home.html#past_meeting">Главный экран и архив</a></td></tr>
     <tr><td>meeting_topics</td><td>Состав и порядок тем</td><td><a href="settings.html#meeting_topics">Настройки</a></td></tr>
 
     <tr><td>settings</td><td>Меню настроек</td><td><a href="settings.html#settings">Настройки</a></td></tr>
     <tr><td>partners_edit</td><td>Имена пары</td><td><a href="settings.html#partners_edit">Настройки</a></td></tr>
+    <tr><td>partners_saved</td><td>Имена сохранены, тост</td><td><a href="changes.html#partners">Что изменилось</a></td></tr>
+    <tr><td>topics_locked</td><td>Темы не меняются посреди встречи</td><td><a href="changes.html#topics-locked">Что изменилось</a></td></tr>
     <tr><td>meeting_preferences</td><td>Расписание и напоминания</td><td><a href="settings.html#meeting_preferences">Настройки</a></td></tr>
     <tr><td>meeting_preferences_scrolled</td><td>Автоотправка итогов и выгрузка истории</td><td><a href="settings.html#meeting_preferences_scrolled">Настройки</a></td></tr>
     <tr><td>account</td><td>Данные аккаунта</td><td><a href="settings.html#account">Настройки</a></td></tr>
@@ -177,7 +191,7 @@
 </div>
 
 <footer>
-  Снимки сделаны на Redmi Note 10 Pro: сквозной проход встречи — скриптом <code>tools/demo_walk.py</code>, остальные экраны — сверкой вёрстки <code>uicheck/run.py</code>. Страницы правятся как обычные файлы: <code>index.html</code>, <code>signin.html</code>, <code>home.html</code>, <code>meeting.html</code>, <code>settings.html</code> и общий <code>styles.css</code>.
+  Снимки сделаны на Redmi Note 10 Pro: сквозной проход встречи — скриптом <code>tools/demo_walk.py</code>, остальные экраны — сверкой вёрстки <code>uicheck/run.py</code>. Снимки экранов, которые поменялись после тестирования, пересняты 16.09; прежние лежат в <code>img/before/</code>. Страницы правятся как обычные файлы: <code>index.html</code>, <code>signin.html</code>, <code>home.html</code>, <code>meeting.html</code>, <code>settings.html</code>, <code>changes.html</code> и общий <code>styles.css</code>.
 </footer>
 
 </div>
