@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Особенности iOS · Familiar для iOS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;800&family=Poppins:wght@500&family=JetBrains+Mono&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">♥</span>Familiar <small>iOS 0.5</small></a>
+    <nav class="tabs">
+      <a href="index.html">Обзор</a>
+      <a href="signin.html">Вход</a>
+      <a href="home.html">Главный экран</a>
+      <a href="meeting.html">Встреча</a>
+      <a href="settings.html">Настройки</a>
+      <a href="ios.html" class="here">Особенности iOS</a>
+    </nav>
+  </div>
+</div>
+<div class="wrap">
+
+<section class="hero">
+  <div class="eyebrow">Для тестировщицы и заказчика</div>
+  <h1>Особенности iOS-версии</h1>
+  <p class="lede">iOS-версия повторяет Android-версию: те же экраны, та же логика, тот же сервер и те же аккаунты. Здесь — как установить сборку и чем iPhone отличается.</p>
+  <div class="meta"><span>Версия 0.5</span><span>Сборка для симулятора</span><span>Apple Silicon и Intel</span></div>
+</section>
+<nav class="toc"><a href="#install">Как установить</a><a href="#same">Что общего с Android</a><a href="#differs">Чем отличается</a><a href="#limits">Ограничения тестовой сборки</a><a href="#v05">Что нового в 0.5</a></nav>
+
+<h2 id="install">Как установить</h2>
+<p class="section-note">Пока у проекта нет аккаунта разработчика Apple, приложение запускается в симуляторе iPhone на Mac.</p>
+<ol class="howto">
+  <li>Установите <strong>Xcode</strong> из App Store и откройте его один раз. В <span class="ui">Settings → Components</span> скачайте <strong>iOS Simulator</strong>.</li>
+  <li>Откройте симулятор: <span class="ui">Xcode → Open Developer Tool → Simulator</span>. Появится окно с iPhone.</li>
+  <li>Распакуйте архив <code>Familiar-0.5-simulator.zip</code> — внутри будет <code>Familiar.app</code>.</li>
+  <li>Перетащите <code>Familiar.app</code> мышкой в окно симулятора. На экране iPhone появится значок Familiar.</li>
+  <li>Нажмите на значок. Войдите по коду из письма или через Google.</li>
+</ol>
+<div class="note ios" style="margin-top:16px"><b>Новая версия.</b> Перетащите новый <code>Familiar.app</code> поверх — он заменит старый, аккаунт и встречи останутся.</div>
+
+<h2 id="same">Что общего с Android</h2>
+<div class="cards"><div class="card"><div class="card-icon bg-orange">👥</div><h4>Те же аккаунты</h4><p>Сервер общий. В iOS-версию можно войти тем же адресом, что и в Android, — встречи и настройки приедут из облачной копии.</p></div><div class="card"><div class="card-icon bg-violet">🧭</div><h4>Те же экраны и шаги</h4><p>Вход, знакомство, встреча, итог, архив и настройки устроены так же, с теми же подписями и тем же порядком.</p></div><div class="card"><div class="card-icon bg-mint">📴</div><h4>Работает без интернета</h4><p>Встречи пишутся в память телефона. Интернет нужен для входа, письма с итогом и облачной копии.</p></div><div class="card"><div class="card-icon bg-yellow">🎨</div><h4>По одному макету</h4><p>Экраны сверены с тем же файлом Figma. Кадры макета шириной 402 точки — ровно ширина iPhone 18 Pro.</p></div></div>
+
+<h2 id="differs">Чем отличается от Android</h2>
+<div class="cards"><a class="card" href="signin.html#auth"><div class="card-icon bg-pink">🍎</div><h4>Вход через Apple</h4><p>На экране входа и в данных аккаунта есть кнопка Apple. Без неё App Store не принимает приложения со входом через Google.</p><span class="count">Экран входа</span></a><div class="card"><div class="card-icon bg-violet">G</div><h4>Google через страницу входа</h4><p>Нажатие на Google сначала показывает системный вопрос iPhone «разрешить открыть google.com», потом страницу выбора аккаунта.</p></div><a class="card" href="signin.html#notifications"><div class="card-icon bg-yellow">🔔</div><h4>Уведомления</h4><p>iPhone спрашивает разрешение один раз. После отказа включить можно только в настройках iPhone — приложение покажет кнопку туда.</p><span class="count">Экран уведомлений</span></a><a class="card" href="settings.html#meeting_preferences_scrolled"><div class="card-icon bg-mint">✉️</div><h4>Автоотправка итога</h4><p>iPhone будит приложение в фоне, когда сам сочтёт нужным. Письмо уходит при первом пробуждении после выбранного часа или при открытии приложения.</p><span class="count">Настройки встреч</span></a><a class="card" href="settings.html#contact_us"><div class="card-icon bg-orange">📨</div><h4>Письмо в поддержку</h4><p>Открывает приложение «Почта». Если почта на iPhone не настроена, приложение так и скажет — на Android в этом случае не происходило ничего.</p><span class="count">Contact us</span></a><div class="card"><div class="card-icon bg-violet">⬆️</div><h4>Строка состояния</h4><p>На iPhone она выше, чем на Android-кадрах макета. Верхние фотографии и панели продлены вверх, а содержимое стоит на своих местах.</p></div></div>
+
+<h2 id="limits">Ограничения тестовой сборки</h2>
+<div class="cards"><div class="card"><div class="card-icon bg-yellow">🚫</div><h4>Apple не входит</h4><p>Вход и подключение через Apple требуют платного аккаунта разработчика. Сейчас кнопка предлагает войти по коду.</p></div><div class="card"><div class="card-icon bg-mint">🖥️</div><h4>Нет «Почты» в симуляторе</h4><p>Contact us в симуляторе всегда показывает «No mail app on this phone.» — это ограничение симулятора, не приложения.</p></div><div class="card"><div class="card-icon bg-pink">🎙️</div><h4>Диктовка</h4><p>Микрофон в симуляторе работает не всегда. Текст удобнее печатать с клавиатуры Mac.</p></div><div class="card"><div class="card-icon bg-violet">📲</div><h4>Живой iPhone</h4><p>Перед публикацией приложение нужно проверить на настоящем iPhone: жесты, клавиатура и вырез экрана там ведут себя чуть иначе.</p></div></div>
+
+<h2 id="v05">Что нового в 0.5</h2>
+<p class="section-note">Те же исправления, что в Android 0.5 от 28.09.</p>
+<div class="cards"><a class="card" href="signin.html#signed_in"><div class="card-icon bg-orange">🔁</div><h4>Смена аккаунта на одном телефоне</h4><p>Если на телефоне войти в аккаунт, который уже прошёл знакомство, приложение больше не показывает приветствие и не спрашивает про уведомления заново: настройки приезжают из облака до выбора экрана.</p><span class="count">Экран «You're in»</span></a><a class="card" href="settings.html#settings_scrolled"><div class="card-icon bg-violet">☁️</div><h4>Копия перед выходом</h4><p>При выходе из аккаунта приложение сначала отправляет в облако всё, что туда ещё не ушло. Раньше это могло потеряться, если потом входил другой аккаунт.</p><span class="count">Log out</span></a></div>
+
+<div class="pager">
+  <a href="settings.html"><small>← Назад</small><strong>Настройки</strong></a>
+  
+</div>
+
+<footer>
+  Снимки сняты 30.09.2026 в симуляторе iPhone 18 Pro (iOS 27), сборка 0.5. Их делает автоматический тест
+  <code>WalkthroughShotsUITests</code>: он нажимает кнопки так же, как человек, и снимает экран после каждого шага.
+  Вход, первый запуск и встреча пройдены с тестовыми именами Anna и Mark; история и настройки — рабочий аккаунт, в котором
+  ничего не менялось. Нажмите на снимок, чтобы открыть его крупно.
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

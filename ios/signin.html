@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Вход и первый запуск · Familiar для iOS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;800&family=Poppins:wght@500&family=JetBrains+Mono&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">♥</span>Familiar <small>iOS 0.5</small></a>
+    <nav class="tabs">
+      <a href="index.html">Обзор</a>
+      <a href="signin.html" class="here">Вход</a>
+      <a href="home.html">Главный экран</a>
+      <a href="meeting.html">Встреча</a>
+      <a href="settings.html">Настройки</a>
+      <a href="ios.html">Особенности iOS</a>
+    </nav>
+  </div>
+</div>
+<div class="wrap">
+
+<section class="hero">
+  <div class="eyebrow">Раздел 1 · вход и первый запуск</div>
+  <h1>Вход и первый запуск</h1>
+  <p class="lede">Эти экраны пара видит один раз: как войти без пароля и как приложение знакомится с парой — спрашивает имена, темы, согласие на обработку данных и разрешение на уведомления. Всё, что здесь выбрано, потом меняется в настройках.</p>
+  <div class="meta"><span>12 экранов</span><span>Пароля нет</span><span>Всё можно поменять позже</span></div>
+</section>
+<nav class="toc"><a href="#sign-in">Вход</a><a href="#onboarding">Знакомство</a><a href="#after">Если что-то пропустили</a></nav>
+
+<h2 id="sign-in">Вход</h2>
+<p class="section-note">Пароля в приложении нет совсем. Войти можно по коду из письма, через Google или через Apple.</p>
+
+<article class="step" id="auth">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/auth.jpg" alt="Экран входа" data-name="auth" loading="lazy"></div>
+    <figcaption>auth</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">01</span><h3>Экран входа</h3></div>
+    <button class="copy" data-copy="auth">auth</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Первое, что человек видит после заставки. Сверху фотография пары, под ней заголовок <span class="ui">Unlock your meeting experience!</span> и строка о том, зачем приложение.</p><p>Ниже поле <span class="ui">Email address</span> и кнопка <span class="ui">Continue</span>. Пока поле пустое, кнопка серая и не нажимается. Под словом «or» — две кнопки: <span class="ui">Continue with Apple</span> и <span class="ui">Continue with Google</span>.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Ввести почту и нажать <span class="ui">Continue</span> — на почту придёт письмо с шестизначным кодом.</span></li><li><span>Нажать <span class="ui">Continue with Google</span> — iPhone спросит разрешения открыть страницу Google, и там можно выбрать аккаунт.</span></li><li><span>Нажать <span class="ui">Continue with Apple</span> — вход через Apple ID (в тестовой сборке не работает, см. ниже).</span></li></ul></div>
+    <div class="note ios"><b>На iPhone.</b> Кнопки Apple в Android-версии нет. На iPhone она нужна: App Store не пропускает приложения, где есть вход через Google, но нет входа через Apple.</div><div class="note warn"><b>Обратите внимание.</b> В сборке для симулятора вход через Apple не работает: для него нужен платный аккаунт разработчика Apple. После нажатия приложение попросит войти по коду. Пользуйтесь почтой или Google.</div><div class="note"><b>Как это работает.</b> Если на этом телефоне уже входили, в поле сразу подставлен прошлый адрес — его можно стереть.</div>
+  </div>
+</article>
+
+<article class="step" id="auth_invalid">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/auth_invalid.jpg" alt="Адрес с ошибкой" data-name="auth_invalid" loading="lazy"></div>
+    <figcaption>auth_invalid</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">02</span><h3>Адрес с ошибкой</h3></div>
+    <button class="copy" data-copy="auth_invalid">auth_invalid</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Здесь в адресе запятая вместо точки. Поле краснеет, справа появляется значок, под полем — <span class="ui">Please enter a valid email address</span>, а кнопка <span class="ui">Continue</span> снова становится серой.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Исправить адрес — ошибка исчезнет сама, кнопка оживёт.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Адрес проверяется на телефоне, ещё до интернета. Письмо на неправильный адрес не уходит вовсе.</div>
+  </div>
+</article>
+
+<article class="step" id="auth_typed">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/auth_typed.jpg" alt="Адрес введён" data-name="auth_typed" loading="lazy"></div>
+    <figcaption>auth_typed</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">03</span><h3>Адрес введён</h3></div>
+    <button class="copy" data-copy="auth_typed">auth_typed</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Адрес правильный — кнопка <span class="ui">Continue</span> стала тёмной, со стрелкой справа.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Нажать <span class="ui">Continue</span> — письмо с кодом уходит на этот адрес, открывается экран ввода кода.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Если нажимать слишком часто, сервер не даст отправить новое письмо, и приложение скажет: <span class="ui">Too many codes asked for. Wait a minute.</span></div><div class="note"><b>Как это работает.</b> Если учётной записи с таким адресом ещё нет, она создаётся сама. Отдельной регистрации нет.</div>
+  </div>
+</article>
+
+<article class="step" id="verify">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/verify.jpg" alt="Код из письма" data-name="verify" loading="lazy"></div>
+    <figcaption>verify</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">04</span><h3>Код из письма</h3></div>
+    <button class="copy" data-copy="verify">verify</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Заголовок <span class="ui">Verify your email</span>, под ним адрес, на который ушло письмо, и шесть ячеек для цифр. Ниже подсказка: письмо может идти пару минут, а новый код заменяет прежний.</p><p>Кнопки «Проверить» нет: код проверяется сам, как только введена последняя цифра.</p><p>Внизу <span class="ui">Resend Code in 59 s</span> — обратный отсчёт. Через минуту надпись становится кнопкой <span class="ui">Resend Code</span>.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Ввести шесть цифр из письма — или вставить код целиком, iPhone предложит его над клавиатурой.</span></li><li><span>Через минуту нажать <span class="ui">Resend Code</span>, если письмо не пришло.</span></li><li><span>Стрелка назад — вернуться и исправить адрес.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Пауза в минуту нужна, потому что новый код отменяет старый: письмо, которое ещё в пути, перестало бы работать.</div>
+  </div>
+</article>
+
+<article class="step" id="verify_wrong">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/verify_wrong.jpg" alt="Неверный код" data-name="verify_wrong" loading="lazy"></div>
+    <figcaption>verify_wrong</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">05</span><h3>Неверный код</h3></div>
+    <button class="copy" data-copy="verify_wrong">verify_wrong</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Ячейки краснеют, под ними — <span class="ui">Try entering it again or request a new one.</span> Дальше приложение не пускает.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Стереть и ввести код ещё раз.</span></li><li><span>Запросить новый код кнопкой <span class="ui">Resend Code</span>.</span></li></ul></div>
+    
+  </div>
+</article>
+
+<article class="step" id="signed_in">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/signed_in.jpg" alt="Вход выполнен" data-name="signed_in" loading="lazy"></div>
+    <figcaption>signed_in</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">06</span><h3>Вход выполнен</h3></div>
+    <button class="copy" data-copy="signed_in">signed_in</button>
+    <div class="block"><p class="block-title">Что на экране</p><p><span class="ui">You're in</span> — почта подтверждена. Экран просто говорит, что всё получилось, и ведёт дальше, в знакомство.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Нажать <span class="ui">Continue</span> — начнётся знакомство: имена, темы, согласие, уведомления.</span></li></ul></div>
+    <div class="note ios"><b>Новое в 0.5.</b> Если в этот аккаунт уже входили и знакомство прошли — на этом телефоне, на другом или даже в Android-версии, — этого экрана и следующих не будет: имена, темы и согласие приедут из облачной копии, и приложение откроется сразу на главном экране.</div><div class="note"><b>Как это работает.</b> Сразу после входа приложение забирает из облака копию истории этого аккаунта. На новом телефоне прошлые встречи появляются сами. Если войти другим адресом, история прежнего аккаунта с телефона стирается — чужих встреч никто не увидит.</div>
+  </div>
+</article>
+
+<h2 id="onboarding">Знакомство</h2>
+<p class="section-note">Четыре шага подряд. Все, кроме согласия, можно пропустить — у каждого пропуска есть понятное значение.</p>
+
+<article class="step" id="onboarding_names">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/onboarding_names_typed.jpg" alt="Имена пары" data-name="onboarding_names" loading="lazy"></div>
+    <figcaption>onboarding_names</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">07</span><h3>Имена пары</h3></div>
+    <button class="copy" data-copy="onboarding_names">onboarding_names</button>
+    <div class="block"><p class="block-title">Что на экране</p><p><span class="ui">Meet the two of you</span> — два поля, между ними слово «and». Пока поля пустые, в них серые подсказки <span class="ui">Partner 1</span> и <span class="ui">Partner 2</span>; на снимке имена уже введены.</p><p>Имена потом подставляются везде: в карточки настроения, в благодарности, в итог встречи и в письмо.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Вписать оба имени и нажать <span class="ui">Next</span>.</span></li><li><span>Нажать <span class="ui">Skip</span> — пара останется «Partner 1» и «Partner 2». Имена можно вписать позже в настройках.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Экран правки имён в настройках — тот же самый, меняются только заголовок и кнопка.</div>
+  </div>
+</article>
+
+<article class="step" id="onboarding_topics">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/onboarding_topics.jpg" alt="Первые темы" data-name="onboarding_topics" loading="lazy"></div>
+    <figcaption>onboarding_topics</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">08</span><h3>Первые темы</h3></div>
+    <button class="copy" data-copy="onboarding_topics">onboarding_topics</button>
+    <div class="block"><p class="block-title">Что на экране</p><p><span class="ui">Pick your first topics</span> — четырнадцать тем карточками в два столбца. Галочка — тема включена, плюс — выключена. Пять тем уже отмечены заранее.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Нажать на карточку — включить или выключить тему.</span></li><li><span><span class="ui">Finish</span> — сохранить выбор. Кнопка не работает, если не выбрано ни одной темы: встреча без тем — не встреча.</span></li><li><span><span class="ui">Skip</span> — оставить пять тем, отмеченных заранее.</span></li><li><span>Стрелка назад — вернуться к именам.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Список тем в приложении один. Выбранное здесь потом живёт в настройках, в разделе <span class="ui">Topics management</span>, там же меняется порядок.</div>
+  </div>
+</article>
+
+<article class="step" id="consent">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/consent.jpg" alt="Согласие на обработку данных" data-name="consent" loading="lazy"></div>
+    <figcaption>consent</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">09</span><h3>Согласие на обработку данных</h3></div>
+    <button class="copy" data-copy="consent">consent</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Поверх экрана тем поднимается шторка: что приложение хранит на телефоне, что обрабатывает и что могут получить сторонние сервисы.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span><span class="ui">Learn more</span> — открыть полный текст условий.</span></li><li><span><span class="ui">Consent &amp; Continue</span> — согласиться и перейти к последнему шагу.</span></li><li><span><span class="ui">Do not consent</span> — отказаться (что будет — на следующем снимке).</span></li></ul></div>
+    <div class="note warn"><b>Обратите внимание.</b> Это единственный шаг, который нельзя пропустить. Шторку нельзя смахнуть — закрывает её только ответ.</div>
+  </div>
+</article>
+
+<article class="step" id="consent_refused">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/consent_refused.jpg" alt="Если отказаться" data-name="consent_refused" loading="lazy"></div>
+    <figcaption>consent_refused</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">10</span><h3>Если отказаться</h3></div>
+    <button class="copy" data-copy="consent_refused">consent_refused</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Шторка остаётся на месте, а над кнопками появляется красная строка <span class="ui">Consent is needed to go on.</span> — без согласия дальше нельзя.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Нажать <span class="ui">Consent &amp; Continue</span> — и знакомство продолжится.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Приложение не закрывается и не ругается — просто объясняет, чего не хватает. Если закрыть приложение на этом шаге, при следующем запуске оно вернётся сюда же.</div>
+  </div>
+</article>
+
+<article class="step" id="notifications">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/notifications.jpg" alt="Разрешение на уведомления" data-name="notifications" loading="lazy"></div>
+    <figcaption>notifications</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">11</span><h3>Разрешение на уведомления</h3></div>
+    <button class="copy" data-copy="notifications">notifications</button>
+    <div class="block"><p class="block-title">Что на экране</p><p><span class="ui">Never miss a moment</span> — приложение объясняет, зачем ему уведомления: напомнить, что пора поговорить.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span><span class="ui">Turn On Notifications</span> — появится системный запрос iPhone «Разрешить уведомления?».</span></li><li><span><span class="ui">Maybe Later</span> — пропустить. Напоминания просто не будут приходить, остальное работает.</span></li></ul></div>
+    <div class="note ios"><b>На iPhone.</b> iPhone задаёт этот вопрос приложению только один раз. Если отказать в системном окне, включить уведомления можно будет только в настройках iPhone. Поэтому сначала идёт свой экран-объяснение, а системное окно — по кнопке.</div><div class="note"><b>Как это работает.</b> Вопрос задаётся один раз на телефон, а не на аккаунт: если на телефоне сменить аккаунт, его не зададут снова.</div>
+  </div>
+</article>
+
+<article class="step" id="home_empty">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/home_empty.jpg" alt="Знакомство закончено" data-name="home_empty" loading="lazy"></div>
+    <figcaption>home_empty</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">12</span><h3>Знакомство закончено</h3></div>
+    <button class="copy" data-copy="home_empty">home_empty</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Главный экран новой пары: счётчики на нуле, вместо списка встреч — картинка и надпись <span class="ui">There are no records yet</span>.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Нажать <span class="ui">Let's have a talk</span> — начать первую встречу (раздел <a href="meeting.html">Встреча</a>).</span></li></ul></div>
+    
+  </div>
+</article>
+
+<h2 id="after">Если что-то пропустили</h2>
+<div class="cards"><a class="card" href="home.html#missing_details"><div class="card-icon bg-yellow">⚠️</div><h4>Шторка «не хватает данных»</h4><p>Если имён нет, при старте встречи приложение напомнит о них. Оно предупреждает, но не запрещает.</p><span class="count">Снимок: missing_details</span></a><div class="card"><div class="card-icon bg-violet">↩️</div><h4>Вернёт на пропущенный шаг</h4><p>Если закрыть приложение посреди знакомства, следующий запуск откроет несделанный шаг. Согласие перезапуском не обойти.</p></div><a class="card" href="settings.html"><div class="card-icon bg-mint">⚙️</div><h4>Всё правится в настройках</h4><p>Имена — в Partners information, темы — в Topics management, напоминания — в Meeting preferences.</p><span class="count">Раздел «Настройки»</span></a></div>
+
+<div class="pager">
+  <a href="index.html"><small>← Назад</small><strong>Обзор</strong></a>
+  <a class="next" href="home.html"><small>Дальше →</small><strong>Главный экран</strong></a>
+</div>
+
+<footer>
+  Снимки сняты 30.09.2026 в симуляторе iPhone 18 Pro (iOS 27), сборка 0.5. Их делает автоматический тест
+  <code>WalkthroughShotsUITests</code>: он нажимает кнопки так же, как человек, и снимает экран после каждого шага.
+  Вход, первый запуск и встреча пройдены с тестовыми именами Anna и Mark; история и настройки — рабочий аккаунт, в котором
+  ничего не менялось. Нажмите на снимок, чтобы открыть его крупно.
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

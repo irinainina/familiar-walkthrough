@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Встреча · Familiar для iOS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;800&family=Poppins:wght@500&family=JetBrains+Mono&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">♥</span>Familiar <small>iOS 0.5</small></a>
+    <nav class="tabs">
+      <a href="index.html">Обзор</a>
+      <a href="signin.html">Вход</a>
+      <a href="home.html">Главный экран</a>
+      <a href="meeting.html" class="here">Встреча</a>
+      <a href="settings.html">Настройки</a>
+      <a href="ios.html">Особенности iOS</a>
+    </nav>
+  </div>
+</div>
+<div class="wrap">
+
+<section class="hero">
+  <div class="eyebrow">Раздел 3 · встреча</div>
+  <h1>Встреча от начала до итога</h1>
+  <p class="lede">Пара садится рядом с одним телефоном и проходит разговор шаг за шагом: разогрев, настроение каждого, темы с планами, благодарности — и в конце итог, который можно отправить себе на почту. Ниже — настоящая встреча Анны и Марка, снятая по шагам.</p>
+  <div class="meta"><span>17 экранов</span><span>Около 15 минут</span><span>Один телефон на двоих</span><span>Работает без интернета</span></div>
+</section>
+<nav class="toc"><a href="#before">Перед разговором</a><a href="#check-in">Настроение</a><a href="#topics">Темы</a><a href="#wrap-up">Благодарности</a><a href="#recap">Итог</a><a href="#edge">Если что-то пошло не так</a></nav>
+
+<h2 id="before">Перед разговором</h2>
+<p class="section-note">Два экрана до того, как пара начнёт говорить.</p>
+
+<article class="step" id="topics">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/topics.jpg" alt="Темы на сегодня" data-name="topics" loading="lazy"></div>
+    <figcaption>topics</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">01</span><h3>Темы на сегодня</h3></div>
+    <button class="copy" data-copy="topics">topics</button>
+    <div class="block"><p class="block-title">Что на экране</p><p><span class="ui">Today's topics</span> — список шагов встречи в том порядке, в каком их пройдут. Первым всегда стоит <span class="ui">Check-in</span> с меткой <span class="ui">First</span> — как у вас дела, последним — <span class="ui">Wrap-up</span>, благодарности. Между ними — темы, которые пара выбрала.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span><span class="ui">Let's have a talk</span> — начать.</span></li><li><span><span class="ui">Edit topics and order</span> — поменять набор и порядок тем прямо перед встречей.</span></li><li><span>Крестик — вернуться на главный экран. Здесь он ничего не спрашивает: терять ещё нечего.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Если есть незаконченная встреча, экран показывает её темы, а кнопки <span class="ui">Edit topics and order</span> нет: встреча продолжится с тем набором, с которым началась.</div>
+  </div>
+</article>
+
+<article class="step" id="icebreaker">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/icebreaker.jpg" alt="Разогрев" data-name="icebreaker" loading="lazy"></div>
+    <figcaption>icebreaker</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">02</span><h3>Разогрев</h3></div>
+    <button class="copy" data-copy="icebreaker">icebreaker</button>
+    <div class="block"><p class="block-title">Что на экране</p><p><span class="ui">Break the ice</span> — стопка цветных карточек с лёгкими вопросами, чтобы начать не с дел. Над вопросом — тема карточки, например <span class="ui">Daily Life</span>.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Смахнуть карточку влево или вправо — следующий вопрос.</span></li><li><span><span class="ui">Continue</span> — выбрать вопрос, который сейчас в центре, и идти дальше.</span></li></ul></div>
+    
+  </div>
+</article>
+
+<article class="step" id="icebreaker_turned">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/icebreaker_turned.jpg" alt="Другой вопрос" data-name="icebreaker_turned" loading="lazy"></div>
+    <figcaption>icebreaker_turned</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">03</span><h3>Другой вопрос</h3></div>
+    <button class="copy" data-copy="icebreaker_turned">icebreaker_turned</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Карточку смахнули — в центре новый вопрос из темы <span class="ui">Dreams &amp; Future</span>. Тот вопрос, что в центре в момент нажатия <span class="ui">Continue</span>, попадёт в итог встречи.</p></div>
+    
+    <div class="note"><b>Как это работает.</b> Вопросы встроены в приложение, из интернета ничего не подгружается и не сочиняется.</div>
+  </div>
+</article>
+
+<h2 id="check-in">Настроение</h2>
+<p class="section-note">Телефон один, поэтому партнёры отвечают по очереди. Над вопросом — имя того, чья очередь.</p>
+
+<article class="step" id="check_in">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/check_in.jpg" alt="Настроение: пока пусто" data-name="check_in" loading="lazy"></div>
+    <figcaption>check_in</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">04</span><h3>Настроение: пока пусто</h3></div>
+    <button class="copy" data-copy="check_in">check_in</button>
+    <div class="block"><p class="block-title">Что на экране</p><p><span class="ui">How do you feel today?</span> Над вопросом — имя <span class="ui">Anna</span>. Лицо и шкала от <span class="ui">Awful</span> до <span class="ui">Great</span>; пока ничего не выбрано, стоит <span class="ui">Okay</span>.</p><p>Ниже поле <span class="ui">What's your mood?</span> — можно в двух словах рассказать, как прошла неделя. Счётчик <span class="ui">0/1000</span> показывает, сколько ещё можно написать.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Нажать на точку шкалы или провести по ней — выбрать настроение.</span></li><li><span>Нажать на поле и написать или надиктовать текст.</span></li><li><span><span class="ui">Next</span> — передать телефон второму партнёру.</span></li><li><span><span class="ui">Skip</span> — пропустить свою очередь.</span></li></ul></div>
+    
+  </div>
+</article>
+
+<article class="step" id="check_in_partner_1">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/check_in_partner_1.jpg" alt="Настроение Анны" data-name="check_in_partner_1" loading="lazy"></div>
+    <figcaption>check_in_partner_1</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">05</span><h3>Настроение Анны</h3></div>
+    <button class="copy" data-copy="check_in_partner_1">check_in_partner_1</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Анна выбрала <span class="ui">Great</span> — лицо заулыбалось, а весь экран стал оранжевым. У каждого настроения свой цвет.</p><p>В поле её текст, счётчик показывает <span class="ui">36/1000</span>.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span><span class="ui">Next</span> — очередь Марка.</span></li><li><span><span class="ui">Skip</span> — если что-то уже написано, приложение сначала спросит «пропустить шаг?», чтобы текст не пропал случайно.</span></li></ul></div>
+    <div class="note ios"><b>На iPhone.</b> Текст можно надиктовать: значок микрофона на клавиатуре iPhone. Распознаёт речь сам iPhone, приложение разговор не записывает.</div><div class="note"><b>Как это работает.</b> Больше 1000 знаков поле не примет, а длинный текст прокручивается внутри поля и не сдвигает кнопки.</div>
+  </div>
+</article>
+
+<article class="step" id="check_in_partner_2">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/check_in_partner_2.jpg" alt="Настроение Марка" data-name="check_in_partner_2" loading="lazy"></div>
+    <figcaption>check_in_partner_2</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">06</span><h3>Настроение Марка</h3></div>
+    <button class="copy" data-copy="check_in_partner_2">check_in_partner_2</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Тот же экран, но сверху имя <span class="ui">Mark</span>. Марк оставил <span class="ui">Okay</span> — экран снова зелёный. Телефон передали из рук в руки.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Стрелка назад — вернуться к Анне, её ответ сохранён.</span></li><li><span><span class="ui">Next</span> — к первой теме.</span></li></ul></div>
+    
+  </div>
+</article>
+
+<h2 id="topics">Темы</h2>
+<p class="section-note">Каждая тема — один шаг. Вверху видно, какой это шаг из скольких.</p>
+
+<article class="step" id="topic">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/topic.jpg" alt="Тема" data-name="topic" loading="lazy"></div>
+    <figcaption>topic</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">07</span><h3>Тема</h3></div>
+    <button class="copy" data-copy="topic">topic</button>
+    <div class="block"><p class="block-title">Что на экране</p><p><span class="ui">Step 2 of 7</span>, название темы — <span class="ui">Child &amp; Family</span>, фотография и карточка <span class="ui">Things to talk about</span>: подсказка, о чём можно поговорить.</p><p>Ниже — <span class="ui">Add a plan together</span>: здесь пара записывает, что решила сделать.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Поговорить о теме.</span></li><li><span><span class="ui">Add a plan together</span> — записать план.</span></li><li><span><span class="ui">Save</span> — сохранить тему и перейти к следующей.</span></li><li><span><span class="ui">Skip</span> — пропустить тему.</span></li></ul></div>
+    
+  </div>
+</article>
+
+<article class="step" id="topic_plan_typing">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/topic_plan_typing.jpg" alt="Пишем план" data-name="topic_plan_typing" loading="lazy"></div>
+    <figcaption>topic_plan_typing</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">08</span><h3>Пишем план</h3></div>
+    <button class="copy" data-copy="topic_plan_typing">topic_plan_typing</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Появилось поле <span class="ui">New plan</span> со счётчиком <span class="ui">29/90</span>: план — короткая фраза, до 90 знаков.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Кнопка «Готово» на клавиатуре или нажатие мимо поля — план сохранится.</span></li></ul></div>
+    
+  </div>
+</article>
+
+<article class="step" id="topic_plan">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/topic_plan.jpg" alt="Тема с планами" data-name="topic_plan" loading="lazy"></div>
+    <figcaption>topic_plan</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">09</span><h3>Тема с планами</h3></div>
+    <button class="copy" data-copy="topic_plan">topic_plan</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Два плана записаны и пронумерованы: «Plan a weekend without phones», «Cook dinner together on Friday». У каждого крестик.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Крестик у плана — удалить его.</span></li><li><span><span class="ui">Add a plan together</span> — добавить ещё.</span></li><li><span><span class="ui">Save</span> — сохранить и перейти к следующей теме.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Всё записывается в память телефона сразу, а не в конце встречи. Если закрыть приложение, ничего не пропадёт.</div><div class="note warn"><b>Обратите внимание.</b> <span class="ui">Skip</span> на теме с новыми планами сначала спросит, пропустить ли шаг, — иначе планы, написанные сейчас, пропадут.</div>
+  </div>
+</article>
+
+<article class="step" id="leave_meeting">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/leave_meeting.jpg" alt="Выйти из встречи?" data-name="leave_meeting" loading="lazy"></div>
+    <figcaption>leave_meeting</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">10</span><h3>Выйти из встречи?</h3></div>
+    <button class="copy" data-copy="leave_meeting">leave_meeting</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Крестик вверху на любом шаге встречи сначала спрашивает: <span class="ui">Leave the meeting?</span> — «встреча сохранится как есть, и в следующий раз вы продолжите с этого шага».</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span><span class="ui">Stay</span> — остаться.</span></li><li><span><span class="ui">Leave</span> — уйти на главный экран. <span class="ui">Let's have a talk</span> потом продолжит встречу с этого же места.</span></li></ul></div>
+    
+  </div>
+</article>
+
+<h2 id="wrap-up">Благодарности</h2>
+<p class="section-note">Последний шаг — каждый благодарит другого. Тоже по очереди.</p>
+
+<article class="step" id="wrap_up_partner_1">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/wrap_up_partner_1.jpg" alt="Благодарность Анны" data-name="wrap_up_partner_1" loading="lazy"></div>
+    <figcaption>wrap_up_partner_1</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">11</span><h3>Благодарность Анны</h3></div>
+    <button class="copy" data-copy="wrap_up_partner_1">wrap_up_partner_1</button>
+    <div class="block"><p class="block-title">Что на экране</p><p><span class="ui">Wrap-up</span>, имя <span class="ui">Anna</span> и одно поле <span class="ui">Gratitude &amp; Support</span> — за что хочется сказать спасибо сегодня.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Написать и нажать <span class="ui">Next</span> — очередь Марка.</span></li></ul></div>
+    
+  </div>
+</article>
+
+<article class="step" id="wrap_up_partner_2">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/wrap_up_partner_2.jpg" alt="Благодарность Марка" data-name="wrap_up_partner_2" loading="lazy"></div>
+    <figcaption>wrap_up_partner_2</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">12</span><h3>Благодарность Марка</h3></div>
+    <button class="copy" data-copy="wrap_up_partner_2">wrap_up_partner_2</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>То же для Марка. Кнопка теперь называется <span class="ui">View the recap</span> — это последний шаг.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span><span class="ui">View the recap</span> — закончить встречу и посмотреть итог.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> В этот момент встреча считается законченной и попадает в архив.</div>
+  </div>
+</article>
+
+<h2 id="recap">Итог</h2>
+<p class="section-note">Всё, что пара сказала и записала, на одном длинном экране.</p>
+
+<article class="step" id="recap_top">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/recap_top.jpg" alt="Что обсудили" data-name="recap_top" loading="lazy"></div>
+    <figcaption>recap_top</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">13</span><h3>Что обсудили</h3></div>
+    <button class="copy" data-copy="recap_top">recap_top</button>
+    <div class="block"><p class="block-title">Что на экране</p><p><span class="ui">Here's what you talked about</span>. Дата встречи и число обсуждённых тем — <span class="ui">1 Topic</span>: пропущенные не считаются.</p><p>Розовая карточка <span class="ui">Icebreaker</span> — вопрос-разогрев. Ниже — <span class="ui">Topics covered</span>, и первой идёт <span class="ui">Check-in</span> с настроением обоих: <span class="ui">Anna Great</span>, <span class="ui">Mark Okay</span>.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Прокрутить вниз — остальные темы.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Итог собран только из того, что пара сама выбрала и написала. Ничего не пересказывается и не сочиняется — искусственного интеллекта в приложении нет.</div>
+  </div>
+</article>
+
+<article class="step" id="recap_middle">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/recap_middle.jpg" alt="Обсуждённые и пропущенные темы" data-name="recap_middle" loading="lazy"></div>
+    <figcaption>recap_middle</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">14</span><h3>Обсуждённые и пропущенные темы</h3></div>
+    <button class="copy" data-copy="recap_middle">recap_middle</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Обсуждённая тема <span class="ui">Child &amp; Family</span> — яркая, с галочкой. Пропущенные — бледные и с перечёркнутым кружком. Так сразу видно, до чего дошли руки.</p></div>
+    
+    
+  </div>
+</article>
+
+<article class="step" id="summary_unfolded">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/summary_unfolded.jpg" alt="Благодарности и планы" data-name="summary_unfolded" loading="lazy"></div>
+    <figcaption>summary_unfolded</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">15</span><h3>Благодарности и планы</h3></div>
+    <button class="copy" data-copy="summary_unfolded">summary_unfolded</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Карточка <span class="ui">Wrap-up</span> раскрыта: благодарности Анны и Марка целиком. Ниже — <span class="ui">Key notes</span>: все планы встречи одним нумерованным списком. В конце — оранжевая карточка <span class="ui">You did it Together</span>.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Нажать на карточку — раскрыть или свернуть её.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> У планов нет галочек «сделано» — это список, чтобы перечитывать, а не список дел.</div>
+  </div>
+</article>
+
+<article class="step" id="recap_sent">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/recap_sent.jpg" alt="Итог отправлен" data-name="recap_sent" loading="lazy"></div>
+    <figcaption>recap_sent</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">16</span><h3>Итог отправлен</h3></div>
+    <button class="copy" data-copy="recap_sent">recap_sent</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>После нажатия <span class="ui">Send summary to emails</span> внизу появилась зелёная плашка <span class="ui">Sent to your email.</span> — итог ушёл письмом на почту аккаунта.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span><span class="ui">Back to home</span> — вернуться на главный экран.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Нет интернета — приложение так и скажет, и можно будет попробовать ещё раз. Писем в день можно отправить ограниченное число; когда лимит исчерпан, появится <span class="ui">Not sent. Too many summaries today — try again tomorrow.</span></div><div class="note"><b>Как это работает.</b> Можно не нажимать кнопку вовсе: в настройках есть автоотправка итога в выбранное время.</div>
+  </div>
+</article>
+
+<article class="step" id="home_after_meeting">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/home_after_meeting.jpg" alt="После встречи" data-name="home_after_meeting" loading="lazy"></div>
+    <figcaption>home_after_meeting</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">17</span><h3>После встречи</h3></div>
+    <button class="copy" data-copy="home_after_meeting">home_after_meeting</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Главный экран: огонёк и сердце показывают по единице, а в <span class="ui">Recent meetings</span> появилась первая строка — только что проведённая встреча.</p></div>
+    
+    
+  </div>
+</article>
+
+<h2 id="edge">Если что-то пошло не так</h2>
+<div class="cards"><div class="card"><div class="card-icon bg-violet">⏸️</div><h4>Встречу прервали</h4><p>Она сохраняется черновиком и в следующий раз продолжается ровно с того же шага — без лишних вопросов. Темы такой встречи не меняются, пока её не закончат.</p></div><div class="card"><div class="card-icon bg-orange">📱</div><h4>Приложение свернули</h4><p>Всё написанное сохраняется сразу. Если свернуть приложение на середине, iPhone даёт ему время дописать встречу в память.</p></div><div class="card"><div class="card-icon bg-mint">🎙️</div><h4>Диктовка</h4><p>Через микрофон на клавиатуре iPhone. Надиктовывают короткие итоги, а не весь разговор: записи разговора в приложении нет.</p></div><a class="card" href="settings.html#meeting_topics"><div class="card-icon bg-yellow">✏️</div><h4>Поменять темы</h4><p>Набор и порядок тем меняются в настройках или кнопкой Edit topics and order перед встречей.</p><span class="count">Экран тем</span></a></div>
+
+<div class="pager">
+  <a href="home.html"><small>← Назад</small><strong>Главный экран</strong></a>
+  <a class="next" href="settings.html"><small>Дальше →</small><strong>Настройки</strong></a>
+</div>
+
+<footer>
+  Снимки сняты 30.09.2026 в симуляторе iPhone 18 Pro (iOS 27), сборка 0.5. Их делает автоматический тест
+  <code>WalkthroughShotsUITests</code>: он нажимает кнопки так же, как человек, и снимает экран после каждого шага.
+  Вход, первый запуск и встреча пройдены с тестовыми именами Anna и Mark; история и настройки — рабочий аккаунт, в котором
+  ничего не менялось. Нажмите на снимок, чтобы открыть его крупно.
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

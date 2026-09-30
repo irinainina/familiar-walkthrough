@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Главный экран и архив · Familiar для iOS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;800&family=Poppins:wght@500&family=JetBrains+Mono&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">♥</span>Familiar <small>iOS 0.5</small></a>
+    <nav class="tabs">
+      <a href="index.html">Обзор</a>
+      <a href="signin.html">Вход</a>
+      <a href="home.html" class="here">Главный экран</a>
+      <a href="meeting.html">Встреча</a>
+      <a href="settings.html">Настройки</a>
+      <a href="ios.html">Особенности iOS</a>
+    </nav>
+  </div>
+</div>
+<div class="wrap">
+
+<section class="hero">
+  <div class="eyebrow">Раздел 2 · главный экран и архив</div>
+  <h1>Главный экран и архив встреч</h1>
+  <p class="lede">Сюда приложение открывается каждый раз. Отсюда начинают встречу, смотрят счётчики и перечитывают прошлые встречи — все сразу или за выбранный период.</p>
+  <div class="meta"><span>9 экранов</span><span>Работает без интернета</span></div>
+</section>
+<nav class="toc"><a href="#home-screen">Главный экран</a><a href="#archive">Архив</a><a href="#good-to-know">Полезно знать</a></nav>
+
+<h2 id="home-screen">Главный экран</h2>
+<p class="section-note">Вкладка <span class="ui">Home</span> в нижней панели.</p>
+
+<article class="step" id="home">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/home.jpg" alt="Главный экран" data-name="home" loading="lazy"></div>
+    <figcaption>home</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">01</span><h3>Главный экран</h3></div>
+    <button class="copy" data-copy="home">home</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Большая фотография, на ней карточка <span class="ui">Love Takes Time</span>: «всего пятнадцать минут, но это меняет всё». Под ней жёлтая кнопка <span class="ui">Let's have a talk</span> — главное действие приложения.</p><p>В левом верхнем углу — значок человека, в правом — плашка с двумя числами: огонёк и сердце.</p><p>Внизу парит панель с тремя вкладками: <span class="ui">Home</span>, <span class="ui">Meeting</span>, <span class="ui">Settings</span>.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span><span class="ui">Let's have a talk</span> или вкладка <span class="ui">Meeting</span> — начать встречу.</span></li><li><span>Значок человека — открыть настройки.</span></li><li><span>Плашка с числами — узнать, что они значат.</span></li><li><span>Прокрутить вниз — увидеть последние встречи.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Всё на экране читается из памяти телефона, интернет для него не нужен.</div>
+  </div>
+</article>
+
+<article class="step" id="home_scrolled">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/home_scrolled.jpg" alt="Последние встречи" data-name="home_scrolled" loading="lazy"></div>
+    <figcaption>home_scrolled</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">02</span><h3>Последние встречи</h3></div>
+    <button class="copy" data-copy="home_scrolled">home_scrolled</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Под баннером — <span class="ui">Recent meetings</span>, последние встречи. В каждой строке цветная плашка с месяцем и числом, день недели и время, первая тема и «+4» — сколько тем было ещё.</p><p>Список уходит под нижнюю панель, последняя строка останавливается над ней.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Нажать на строку — открыть итог той встречи.</span></li><li><span>Стрелка ↗ справа от заголовка — открыть весь архив.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> В строке — те темы, что были у встречи в тот день. Если пара потом поменяет набор тем, прошлые встречи не изменятся.</div>
+  </div>
+</article>
+
+<article class="step" id="home_stats">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/home_stats.jpg" alt="Что значат числа" data-name="home_stats" loading="lazy"></div>
+    <figcaption>home_stats</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">03</span><h3>Что значат числа</h3></div>
+    <button class="copy" data-copy="home_stats">home_stats</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Нажатие на плашку с огоньком и сердцем поднимает шторку с подписями:</p><p><strong>Week streak</strong> (огонёк) — сколько недель подряд пара встречалась хотя бы раз. <strong>Total meetings</strong> (сердце) — сколько встреч проведено всего.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Смахнуть шторку вниз или нажать на затемнённый фон — закрыть.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Сердце — это счётчик встреч, а не лайк. Лайков в приложении нет.</div>
+  </div>
+</article>
+
+<article class="step" id="home_empty_scrolled">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/home_empty_scrolled.jpg" alt="Пока встреч нет" data-name="home_empty_scrolled" loading="lazy"></div>
+    <figcaption>home_empty_scrolled</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">04</span><h3>Пока встреч нет</h3></div>
+    <button class="copy" data-copy="home_empty_scrolled">home_empty_scrolled</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Так выглядит главный экран сразу после знакомства: вместо списка картинка и надпись <span class="ui">There are no records yet</span>. Стрелки в архив нет — в пустой архив вести незачем.</p></div>
+    
+    
+  </div>
+</article>
+
+<article class="step" id="missing_details">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/missing_details.jpg" alt="Не хватает данных" data-name="missing_details" loading="lazy"></div>
+    <figcaption>missing_details</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">05</span><h3>Не хватает данных</h3></div>
+    <button class="copy" data-copy="missing_details">missing_details</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Если пара пропустила знакомство и имён нет, при старте встречи поднимается шторка: «вы указали не всё — зайдите в настройки, впишите имена и выберите темы».</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span><span class="ui">Settings</span> — перейти в настройки и вписать имена.</span></li><li><span><span class="ui">Skip</span> — начать встречу как есть. Партнёры будут называться Partner 1 и Partner 2.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Спрашивает один раз, пока приложение открыто. Если шторку просто смахнуть, это не ответ — спросит при следующем старте встречи.</div>
+  </div>
+</article>
+
+<h2 id="archive">Архив</h2>
+<p class="section-note">Стрелка ↗ у <span class="ui">Recent meetings</span>. Все встречи, по месяцам.</p>
+
+<article class="step" id="all_meetings">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/all_meetings.jpg" alt="Все встречи" data-name="all_meetings" loading="lazy"></div>
+    <figcaption>all_meetings</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">06</span><h3>Все встречи</h3></div>
+    <button class="copy" data-copy="all_meetings">all_meetings</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Заголовок <span class="ui">All meetings</span>, дальше встречи, разложенные по месяцам: <span class="ui">September, 2026</span>, <span class="ui">August, 2026</span>… Строки такие же, как на главном экране.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Нажать на строку — открыть итог встречи.</span></li><li><span>Значок календаря справа вверху — выбрать период.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> В архиве только законченные встречи. Прерванная встреча ждёт, пока её доведут до конца.</div>
+  </div>
+</article>
+
+<article class="step" id="all_meetings_filter">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/all_meetings_filter.jpg" alt="Выбор периода" data-name="all_meetings_filter" loading="lazy"></div>
+    <figcaption>all_meetings_filter</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">07</span><h3>Выбор периода</h3></div>
+    <button class="copy" data-copy="all_meetings_filter">all_meetings_filter</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Шторка с четырьмя вариантами: <span class="ui">All dates</span>, <span class="ui">Last 7 days</span>, <span class="ui">Last 30 days</span>, <span class="ui">Last 12 month</span>. Выбранный отмечен галочкой.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Нажать на период — список сразу сузится, шторка закроется.</span></li></ul></div>
+    
+  </div>
+</article>
+
+<article class="step" id="all_meetings_filtered">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/all_meetings_filtered.jpg" alt="Период выбран" data-name="all_meetings_filtered" loading="lazy"></div>
+    <figcaption>all_meetings_filtered</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">08</span><h3>Период выбран</h3></div>
+    <button class="copy" data-copy="all_meetings_filtered">all_meetings_filtered</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Под заголовком появилась плашка <span class="ui">Last 30 days ×</span> — видно, что показан не весь архив.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span>Крестик на плашке — снова показать все даты.</span></li></ul></div>
+    <div class="note"><b>Как это работает.</b> Период не запоминается: при следующем открытии архив снова показывает всё.</div>
+  </div>
+</article>
+
+<article class="step" id="summary">
+  <figure class="phone">
+    <div class="phone-frame"><img src="img/summary.jpg" alt="Прошлая встреча" data-name="summary" loading="lazy"></div>
+    <figcaption>summary</figcaption>
+  </figure>
+  <div class="step-body">
+    <div class="step-head"><span class="num">09</span><h3>Прошлая встреча</h3></div>
+    <button class="copy" data-copy="summary">summary</button>
+    <div class="block"><p class="block-title">Что на экране</p><p>Встреча из архива открывается тем же экраном, что и итог сразу после разговора: дата, число тем, вопрос-разогрев, темы с настроением и планами (подробно — в разделе <a href="meeting.html#recap_top">Встреча</a>).</p><p>Отличие одно: внизу только <span class="ui">Send summary to emails</span> на всю ширину, без <span class="ui">Back to home</span> — назад ведёт стрелка вверху.</p></div>
+    <div class="block"><p class="block-title">Что можно сделать</p><ul class="actions"><li><span><span class="ui">Send summary to emails</span> — ещё раз отправить итог этой встречи на почту.</span></li><li><span>Стрелка назад — вернуться в архив.</span></li></ul></div>
+    
+  </div>
+</article>
+
+<h2 id="good-to-know">Полезно знать</h2>
+<div class="cards"><div class="card"><div class="card-icon bg-violet">☁️</div><h4>Копия в облаке</h4><p>Встречи хранятся на телефоне, а копия сама уезжает на сервер. На новом телефоне история вернётся при входе в тот же аккаунт. Кнопки и значка для этого нет — всё происходит само.</p></div><a class="card" href="settings.html#meeting_preferences_scrolled"><div class="card-icon bg-yellow">📤</div><h4>Выгрузка истории</h4><p>Всю историю можно выгрузить простым текстом через системное меню «Поделиться» — в Заметки, мессенджер или письмо. Кнопка — в настройках встреч.</p><span class="count">Где кнопка</span></a><div class="card"><div class="card-icon bg-pink">💛</div><h4>Лайков нет</h4><p>Сердце в счётчике и на вкладке Meeting — просто значки. Оценивать встречи, темы или заметки не задумано.</p></div></div>
+
+<div class="pager">
+  <a href="signin.html"><small>← Назад</small><strong>Вход</strong></a>
+  <a class="next" href="meeting.html"><small>Дальше →</small><strong>Встреча</strong></a>
+</div>
+
+<footer>
+  Снимки сняты 30.09.2026 в симуляторе iPhone 18 Pro (iOS 27), сборка 0.5. Их делает автоматический тест
+  <code>WalkthroughShotsUITests</code>: он нажимает кнопки так же, как человек, и снимает экран после каждого шага.
+  Вход, первый запуск и встреча пройдены с тестовыми именами Anna и Mark; история и настройки — рабочий аккаунт, в котором
+  ничего не менялось. Нажмите на снимок, чтобы открыть его крупно.
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
